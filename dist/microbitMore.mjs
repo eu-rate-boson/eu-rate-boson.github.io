@@ -24,7 +24,7 @@ var translationMap = {
 var entry = {
   name: 'Microbit More',
   extensionId: 'microbitMore',
-  extensionURL: 'https://microbit-more.github.io/dist/microbitMore.mjs',
+  extensionURL: 'https://eu-rate-boson.github.io/dist/microbitMore.mjs',
   collaborator: 'Yengawa Lab',
   iconURL: img$3,
   insetIconURL: img$2,
@@ -1728,7 +1728,7 @@ var WebBLE$1 = /*#__PURE__*/function () {
           var dataView = event.target.value;
           onCharacteristicChanged(uint8ArrayToBase64$2(new Uint8Array(dataView.buffer)));
         });
-        characteristic.startNotifications();
+        return characteristic.startNotifications();
       });
     }
     /**
@@ -1752,7 +1752,9 @@ var WebBLE$1 = /*#__PURE__*/function () {
         return service.getCharacteristic(characteristicId);
       }).then(function (characteristic) {
         if (optStartNotifications) {
-          _this3.startNotifications(serviceId, characteristicId, onCharacteristicChanged);
+          return _this3.startNotifications(serviceId, characteristicId, onCharacteristicChanged).then(function () {
+            return characteristic.readValue();
+          });
         }
 
         return characteristic.readValue();
@@ -2919,7 +2921,7 @@ var EXTENSION_ID = 'microbitMore';
  * @type {string}
  */
 
-var extensionURL = 'https://microbit-more.github.io/dist/microbitMore.mjs';
+var extensionURL = 'https://eu-rate-boson.github.io/dist/microbitMore.mjs';
 /**
  * Icon png to be displayed at the left edge of each extension block, encoded as a data URI.
  * @type {string}

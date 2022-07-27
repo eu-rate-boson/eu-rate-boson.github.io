@@ -147,7 +147,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
 var onClickLogo = function onClickLogo() {
-  window.location = 'https://microbit-more.github.io/';
+  window.location = 'https://eu-rate-boson.github.io/';
 };
 
 var handleTelemetryModalCancel = function handleTelemetryModalCancel() {

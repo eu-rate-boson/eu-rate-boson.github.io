@@ -90,11 +90,11 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
    */
 
   workbox.precacheAndRoute([{
-    "url": "326c5f98902ccd335b5b.worker.js",
+    "url": "4f46f43b64af7fd567fc.worker.js",
     "revision": null
   }, {
-    "url": "326c5f98902ccd335b5b.worker.js.map",
-    "revision": "a877fb1e9a4260e9c995abbbdb054920"
+    "url": "4f46f43b64af7fd567fc.worker.js.map",
+    "revision": "9f37af3b8f67158faeae72520443dd98"
   }, {
     "url": "blocks-only.html",
     "revision": "adba19ed6746f4b692afc48665e87ed3"
@@ -112,10 +112,10 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "8f44a83bc2884a3b22bf5cef34606bfb"
   }, {
     "url": "chunks/gui.js",
-    "revision": "d9bf9b1930647a1c4f4e0b559e27ff72"
+    "revision": "4a22ec0be60ca4ee46bbdf584d9e7a96"
   }, {
     "url": "chunks/gui.js.map",
-    "revision": "2b79057296dd6c20413b4ed76eb9cd01"
+    "revision": "3838fefb8d4eda280af6581e48295e5c"
   }, {
     "url": "chunks/player.js",
     "revision": "90a5d5f3983a78552181a78aa0e74ff0"
@@ -4123,10 +4123,10 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "a93ba32a67950f762bc5343e6a24d3ab"
   }, {
     "url": "lib.min.js",
-    "revision": "96f862082648110403043926687e52e5"
+    "revision": "5f4991b82b841236316e7e33c1afb13d"
   }, {
     "url": "lib.min.js.map",
-    "revision": "12a9a36e8f62f46a3fed89985bb557fb"
+    "revision": "2bfa32016288cdb00f6ec2ae25cfa02d"
   }, {
     "url": "player.html",
     "revision": "36ca0ff4afd1a534052df6edb8800234"
