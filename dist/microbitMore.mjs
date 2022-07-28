@@ -22,7 +22,7 @@ var translationMap = {
   }
 };
 var entry = {
-  name: 'Microbit More',
+  name: 'Boson',
   extensionId: 'microbitMore',
   extensionURL: 'https://eu-rate-boson.github.io/dist/microbitMore.mjs',
   collaborator: 'Yengawa Lab',
@@ -54,7 +54,7 @@ var entry = {
     });
   },
 
-  helpLink: 'https://microbit-more.github.io/',
+  helpLink: 'https://eu-rate-boson.github.io/',
   setFormatMessage: function setFormatMessage(formatter) {
     formatMessage$1 = formatter;
   },
