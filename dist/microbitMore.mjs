@@ -32,7 +32,7 @@ var entry = {
   get description() {
     return formatMessage$1({
       defaultMessage: 'Play with all functions of micro:bit.',
-      description: "Description for the 'Boson' extension",
+      description: "Description for the 'Microbit More' extension",
       id: 'gui.extension.microbitMore.description'
     });
   },
@@ -1370,7 +1370,7 @@ var log$2 = minilog('vm');
 var img = "data:image/svg+xml,%3c%3fxml version='1.0' encoding='UTF-8' standalone='no'%3f%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='150px' height='150px' viewBox='0 0 150 150' enable-background='new 0 0 150 150' xml:space='preserve'%3e %3cimage id='image0' width='150' height='150' x='0' y='0' href='data:image/png%3bbase64%2ciVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP%2bgvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAq2ElEQVR42u2dd5xVxfn/3zNzzrlt%2b8JSlCaggDTF2EAsCLZgRU1sMYkl%2bDWxJCZqMLHFEo0laiwxMRo1zWisP1FRNBYQRUARO03a7sLWu/fec87M/P64y7JLV/e6cfe%2beZ0Xe%2b49Zc4znzvlmWfmCGutJU%2bedkZ2dALydE7ywsqTE/LCypMT8sLKkxPywsqTE/LCypMT8sLKkxPywsqTE/LCypMT8sLKkxPywsqTE/LCypMT8sLKkxPywsqTE/LCypMT8sLKkxPywsqTE/LCypMT8sLKkxPywsqTE/LCypMT8sLKkxPywsqTE/LCypMT8sLKkxPywsqTE/LCypMT8sLaDhYtWsR3Tjyxo5PxjSIvrG1gjOHIyZM5aMIE5s2b1y7XbGxs7OjHyjldQlg777wz27OozupVqzb5bNKkSXz8ySecddZZ7Lfffpt8v2DBgu1ORxiGeJ5HQ0NDR5sk53QJYS1ZsgTHcbj997dt8ZhkMslBEyZw771/bPls1qxZHH30US37r732GudMndqyX1hYyIUXXLBdQjn7rLPwPA%2bt9XaJ/BuP7QLE43ELWMdxbJ8%2bfTZ7TL9%2b/ay11l5zzbX2v6%2b8bGtqauyAAQM2Oe7www%2b3H3/8kT3pO9%2b11dXVNgxDW1ZWttX7T5t2mRVCWNd1rRDCrlixoqNNknO6hLBKSkosYHv16rXZ7/2Mbw8/4oiW/f4DdrKFhYVbvF4kErEXXXRRy/7MmTPteT/5yVbTMHbsWBuJRKwQwn7%2beV5YnYKFC9%2b31mYF8czTz2zy/V577mmNMW0%2bq6qq2uL1UqnUJp%2bdcOJ3bENDwxbPkVLaNWvWWGut1Vp3tElyjrC2K1T4WZ5%2b/EmOOu4YwjBs8/nUH57FnX%2b6J2f3PfbY47Ch4bEnHutoE3xtdClhAfTs2ZMbr7yaU84642u7p6ckq1ZXUt69W0c//tdGl%2bgVtuaZ06Yw9UdnMndIN9bcfGtO77Xyqh/zy5jLcCdCPJ3q6Ef/WulSJVbtzBnUHTOZ39RnqLKWu8ssOtyd4gWPEu/br13v9eruu7LLss84I0xzoRUU9%2bvLqLmfIByno83wtdClSqzll/yKHheez123XEN/aylfUg9Xn8zzZ5/ervd592c/Z8Tpp/KDEXuwY73LPq/OY8e99mTtK693tAm%2bNjpViRUazbJ11RgJrnIQCKy1eFKhCXEDQVBTxcoXn2f5nDk8%2bfZrXPPYDNySUoQUCCFACgxgrMFYQ5jtOSMQSAFCCKSQSCGQQmAtGEBaiChFSoeEyRSZ6rX8/vgJTDp8Ej0HDaVs0pF4iXJkzCPqeFknafP1oo5L1HE72nztSqcRlgVOfe5%2b0kpgpEVaidEBVoGNSorShdQ4DRBqSk2Swnhvfr3bsTjuWkpEHGENjVLw9MI5/GfVewhZQmNUkEgbfAWuhrQDrgFhQQuIhprQU5Ax9PES9OtRTkVZd1atreSjZUto8mIkEVjHkrYZClOG%2bogl4rjIULRJ/78POq2jTdiudJoK3xiDLywpT1CShoyEwBEseuhJqJHsMnUiEePRV8f5%2bcE/JO43cN/bVzKs/4sM6%2bHT1Jhh%2bodjOHrIpRw8/AAe/fA1Xl2xknVemliQFVRaQCjAKHAMZGIJvjdwdw7t0Y/V9et4Z8XnVC5YzKhddmHy%2bD2piMd45NN5PPv5B5TXhTx45gWQMUz%2b%2by3ISLSjTZZTOk0bS0nJmERPhAVfQcaFUl%2bw9OHnEHVrKbSGo3Y8gCsnHMEzb5xDKtKd/QbNZNnqk5i5/GpeWX4l/csqCRMH8XHtruxWshOXjf82PdIKIyGU4OjsvWIB7BPrxUNjpzD3%2bSeJlccZXdaf43Ybx7mHHcshA3Zl18IKBg4ZRFFNkj/s/x3CoignPXAbMmWxxnS0uXJOp6kKAZJ%2bhtNe%2bwdaWISVxI3l4ZP/jyP/cR9Dox6XDDuEJ2t/wL4Vb7JuzaPs0bs/Vhl8UUyVteyIYLFt4IP5Z7PzyDeZ/ebtDBu9J1e9PR0bhCgDRhiGJrpz/rcOZfAuw9CffYZxh5Leb39cdmK/0VXMmF2IYxoQcx7DDT/iwKkn88jNf%2bH02Q8TX1ZDw%2beVBN8ahKPBd6C7G%2bePY6d0tPnalU5TYgEkvAh9nQgIQTS0BI7isIt/StSuY9qoSdz/6VUcWPEORc7/Y48dR2AVfPBRNbfdeCP1ixaBgD5BAWN3u4WPPzmAEaOvwA0a2MPrRaBSRAOXZBQu%2bdZhjB23B7WVHxEOmsJf/tOLS/Y%2bGCcZJxqswTQM5uozEvzinu/DoDN44Q%2bPccUDt/PnsSexZocEqwqy6XWsJGN87t73uI42XbvTqUosgBWNtfxkzhMIQLgOOjQcteNg6oNCvjd4Tz5c/STf6n0AyDT1tYZuOxZg0gprLVOmTOHvf3qAVNzBD1IsbRrLE5%2bdwNQRZ3HOzBlYr5JLdzuZlx/9Nxee/SMiO52IKJ6M71YjhU8QDkR4VahkL0zRUsrqA%2boTq7GrliKWPcrzn73Pm9XLeb1%2bBU7G0OhJ%2biXhzkNP6WiztTudqsQC2KGghArj4StwUiEGw%2bTeQ1hV/w/ebtybPbodADIDxCgoirBq2UqMMVhreeSRR3jp04%2bIakuBFNTUnM/Bg/4fxiuhh0wQNVGGF5bz80vOR9KHHx68N78%2b7D20ExLICMJZSbRJod1GrFY02N789vRVHLDncKz2%2bPEvf873h%2b6LYy3SZjsAp48a19EmywmdTlgA0/Y8BF9orNZoR5OIFXHYLm%2bjw7EYB5qaDEEQABIdKqTMmsEYw5QJE5BS4LgRhvY8hn6F7/PKvLfYbcgQdigo56O6BlSVT6TnHtwxt5grnvoWSA%2bhi7A6RsoVWJECP0GmvIrLbxvLC8sTmIK9WPTwY0SVwQ8MWgqKA82evdrX4/%2b/QqcU1g6FpQy3hfhRhwQuwgT0iMynJPgWKUcQjUaZPHky1157Lb1790Zr3XJufd06EBKrHQoihRSJCB/KKoZG4wwo3JHZb84CJLFBo7jgmJcJYp/jNpSh9EYtCpnGrSknGSngvEnLKO87AK0FqVSaQtfDt5o%2bkSIE4os93DeETiksgJ%2bMPggtJUILEJqwMY4jFBqNlJLp06czbdq0FlGtb2oaq9EWUOCiEVpjVQxrA1AO69JJsIaGqjU4tcswmXIQFu21DU%2b2KkSrEK0TiLo1hIEEBNbQIqbvD9uno82UMzqtsPoWlVGMSxpBCpfPVh3FWudFEnYbPiQrsFIAIUZX0hA2MannOF5YOpfPG9ey3/BR2aGcxjQ3zTgDJZoI4pWodNuQGDddjImkKFJLuHXO3tRVL0UIQzTu0Rj4xIxkUHnPjjZTzui0wgK4atQEApFhSdVS3qgbyYjCBwlDSRgGeFGJoABU23OiXinCWDJW4Kcf47nVhzO6SDO3spLlVbXsslN/0tEQsWo2k/d%2bj3Mnf4AMS9FeLehCkAHYCMZNEE17XHzKu4zaoRbq/8vgCeMJZQxcweDiok5TCf7n8cc3%2baxTC6tfcTndfMVtH83jgn0mUp/ux5LkNIwwHH3MqViZROp4m3O69S7HyrWoTBKduARdcxQLUqtYMX0hqyvfJx0EHH/cqQT2U157Mcad0yso9GtxTAzhNCDDIpAuUfMRJWnLFQ/txaJ3a3Gs5uLfXMGTy99DGMN5wyd0tHnajaOPOmqTzzq1sACmDhuPSTWytlby8tLfUBL/J0HwBA8%2b8Beko5DNJpBSopTi448XIE0MI/rwn/fO4KhRJ3HtS88z9/Z7eOlnNzPt9X9x2113EfckVZ9cS0Gt4ZJzXmFE6WJKVDFH7fUwKkhy4sHVDBvzCUovJfPhvex70tF8Z7fxTP94LtFQUB4r6GjT5JROL6y9evenviDDpfOmc%2bjwPXjrw8tIuufRZC/mmcefwIgMSBBEeeSRR3DNOwSZUTy85hgmDv0N977zNCJSits7QVHfwTTYFK%2bvWMQDL75ANBNQ/9E1/Oq3CT5dW0QYVrHniDJEuhd/nVHOrDdqycy7mV47lPOXe%2b7jljnTqXctp%2by0ezZEpxPT6Tzvm%2bO9ypX8%2bOPnGJhyOX/vSbipNIurLmf3Xf5JUdiP5YuL2WHHEBNfwgfpEpLr7mZcxe5cPfcV5qdrKMhAdaGkMGVxAkN9zDJ1xzGMLunNQYcewIcLFhHzCyGWwMoIwqSQQYom28QRpx/N/Xc%2bwL1zX%2bKNTBVKGx4c/12iqnPFX21MlxAWwA%2bee5A612Bcy9DSMs4cOIyeDGBhcjbxsJYAS0HRnvSMlvLC4uXctXwmXuDy7nV3s%2buVZ6F8TYgh6cDqy%2b9n%2bC9/wEjhcdreR2LXrOWmP9/KWzPnULeujvKe3TjwkIO44NzzWJ1p4Ma3X6JGZPBdh75NkjsmndTR5sg5XUZYzy3%2bgN8vm0NROsTVxTRFQgowDKsooChaTkYHLFlTzyIqiQtNtKmM0Kvm82feYt5dj2DLYrhGYGuSDDvvu5QdOhbPaAyW0bFeHN59CL17FOEoSVMmzeLqSp5d9iGf0oSwAkGIZxTn7Lw34/vu3NHmyDldRlgAa5uSNAYZjDAIFBKLwMFajRISK8g6UXWItgZjDIENSYcBESTaEWgBobV0E1GMlEgBVlgCQJoNjdYQixQb/OpWgCckvQtLOtoMXwtdSljbSxiG/PSii7IREs2NbGstQmTj4i0WLCiluPGGGzo6uf%2bTdJrQ5PYknc4gTfb3tr7zJgCsheaSCMAEQUcn9X%2bWfIm1BRYvXsKc2W%2bSSqfQWmO0JtQhvh%2bgjcZ1PQ47/DAG7rRTRyf1f5J8ibUF7rjjdnSokao5pEZn21xexENrQyKewJHqK96l89LpHaRfhsrKSowxILIxWgA79t6Bs846k8umXcbEgw7GYrjzrjs7Oqn/s%2bRLrM1QUVHB7rvtzhFHHEGiIMHfHnyYhR%2b8z5/vu68lvKYlzMaYlkDBPBvolBZpaGigpLikZX3QDz/8kKampi90jc9Wr%2bLXV13Jxb%2bcxryF75EJQozIzpK2QoKURAoLvpKoDjvscKqrqzvaXDmhUzbezz/vfG67/Tbi8Tj33nUPJ/3wVBwteGHeHN5uqEQrgW2eMq%2bkwpESR6qWafPSShwhCLVu9kVJBBZtTXbKNWCsxWKQjoPBYgVYY7PT87Vp2RdCYIUg7acpX1nH2cefSL/%2b/fno409wHIddd92V%2bfPnd7TJ2p1OVxX%2b4he/QEiB67rccsstTP3x/4FvCaTl5sp3MEIQiraP3brMiX4JD8L632bG2/LAslWa139/G9EQPl61jNqaGioqKpgwYQIXXXQRN3Qyf1inqgovu%2bwygiBg2bJlhGHIIYccQk1NDa5wOPb%2bG4homZ3IGpo2W7TV5pkvv8V83bLFA9NmK07DoRedQ9JViJTm%2bmuuo7qqmoaGhqxD9qc/7WjztSudpiq89JJLSaVTlBSXsGzxEv7x%2bL%2b54P/O5cbrf8vgH51IrykHUxYotAJJEqu742SWU/i6T1xXbXK99UYx1sOxPliBUSHaFlCeWUdl3FDgJ7LHrj9YbIif1xKWHTgSvBL8SD1x38EIy5IZr7L4ur9Qg2Xy0ZN54rEnuea6K6lcU4vyLL%2b97vqONmW70CmEdeU1N7CucgURL8r1v72Ok08%2bmT333JNrLvsVelhvDr76YjISokbQ6EEsVQYIqosbsGF3orpuk2vKFpe7ACyh8HDDCGV%2bHX6kGmNLQW/cIZDNpwjSShM6EazxUWEhGaUAg9KamT%2b4iMySdcz876scsN84MmEtv778eurr6/GcODf9blpHm/Qrs93CGrnP/aQ8jecXolWG7a1Fg4JGHFXNh09fCsC%2b425kBf0osilSMopjNyw0mylcwT6Dd%2bDh359EZWU94499asvXjST5ZMaZ/OH2u1m65AOUG%2bPaa68B4Njjj%2bWWG25mwNDBHP%2bfu0jGHRKZ7MIeFsstC89ih6TfPEAsNhRPm6N5aAcFTZEIj/Y5hpcLDmFdzCDNRg5Su2FfCENGFbNzw1PcOP9PLbH11gGRBhIb3Uc3L7RlBX%2b0l3HmL67YJCnpm6JEpf/lc9uA/Uka4XjYB0Yi1r33pS6jccgc9wrxPntv8ZjtFtau4%2b%2bgwXNJZGKknRBht09YkhSOaOSwMdXceP1vOPCgX7JIjqG7XkudU0rEpDckRq2hm%2bsxbmQVl/ziEvY87t9bvq52GVgxnWKbot/OO3HDdde1fLfwvYX87tbfkZwwikzPclxjEdbS5EKPlSluW3wbUW8hMhT4rocbbiWzjKB5zhYIF%2bNopIa3U4fw99qhm%2bZcM7FAsiYhOUs9yZjyj7ACRNAsLC1AbWR2C0JarJH8aeF43oztxj1/uKnNIU03F4NMEgu/3Go12sKfaqay46ixHJR4hugHD3%2bp62AEz8nvsKzoAM4888zNHrLdvcJGJ0YkUAROEyIby9sKgREGiUZgwXgt3/gKomnJHTddz7W/uZJ6dqQ8XEpjJIYSVWAjLcdmbA9WrX2Dm258hksvvgTEljM8cAwvPvkQ%2b%2bx/PP9sJSqAXYfvSmbHCnRFOY4xgMDVEkdBY/cEy%2bo%2bp3%2bDS0Qq0q6PZzZkcigjOGHzBFYhsI7GCok0BqNClBEgYY%2bC54jtMITz%2b%2b9BNxGi/BJSsQ1VqhURhL%2bM3otWEAYersmAyi7ahrSbLyUNCAwn7jKb86/4hF4VhVxx%2bYaSywnSKEnWxl8CJeGuW%2b5kyLdDxn83idhKmWLl%2biajA4Rt8juUkjnPPMcDNau2KKz26RUKH0dHENZFywCtMi2btTGMClvXEtt3yW0ekRXMsUccstlv9598KIHK5mGjZwikAQyhNLitfvBiI9sK42CVpslzsDJAWIORhsABGbRN1ZCmm%2bGq28mo7Ep9wuiWzQuTlIaf0quW5qJq%2b589FjEMdFfxeXUNf3/oH60S1z7ZZTYpGDbFFx6hjIAwpNwYgXRbtlA6OPjYrcinXfxYvnQppAahQ0LrIc2GVDuiChVksND%2bEwisQGxBsdWN9S0VU68kZF5dSFkmu%2bRjdKBsjqsCtVGtogx83NSL3a9tYo9ulicucShMp0i7Bre5IZ%2b9t0XVlfHjnd7k%2bj/tw149K0H3av7K4qCY0ns6flGajGNwv8Bq3DIMuOO4Yq5Y3MBr0dlov5GTv//DDTE8X5XtuEwk5VNf2A8vU48wENoNJzXJAozQOGy5RmkXYUUzDpWfPUjNqnlYYcia34IU2SIjKMORX9Qo2zheWKQVW/wVh9airMAIwYqEpnz8ztQJQdpx4J2A0A9xHW8TYWWKLMWN69CqG8Pv/QPLl5zP0EwTUiq0Y9scv7a8jgG1itl/vJ%2bej/yGpkIXZSyhEAgT8KsFa/BqNJ4TwTqZNqWjdgqwpgmlHazyka1LUQUjRhje%2bu277LHz/sxbMA95/90cKyzCCIwEYWVzlbi1olAA2ajX7FiDRZCd6ratAjRUvej7s6XUmxhSRMGm0JCt40SaqA/9R2/5/HYpW7UTEApLQeFgrDbZIQ1tsYHBZizWrCUIDRHP3bZgWth23eEYixGbb8hq5RANFKFUFKUL8EWCQDpIo3GFIuI4SAORjX503kqDDaIEmXqWRLoT1xJTYPHSLrq5Ol2/Jfw4NqMRjXWsTZQQT0UobnIRYYTRqxcQTYWYGC0Z2sbwUqNtMUL6aFPU9sk1FIaNlFbO59qbf0dxopg33/qUBhfQLjKUCG2wYls2soBBGYPUDliJDxgcJJmtn1rYQNL3WDh/HqG/jjBowgZN2EwTNp0kZZIsmvvKlvPmi4pocwhceg8%2bHqMjDJp4HTGryRiXift2546rv/%2blrrnNvmpLFbj5A1PSJ1Q%2bGcfiylqMjYLxcKze%2bnWL0jhJl7OGKb635FL6NlWBB7gBXija3M%2bKBp54vxtKhBwVe4mY4%2bEZQ00kZK8PXsS1PugI1gk2acv5DZZVVtE/Ai7pNr837RmcwGP6TxM89PenmHb11Vzxq2ngBwjHgjBY4RAg8exWerRC4FsHTwQgQ5AQsxbQhGLrjV6nvpHVNw0i9eLhVE0PkEKhhUPFeR9tV/61i7AMhozthVUhxtA8CaGQZSuqeOSRR5gy5Yuvr7n95drmC93iIEpJup5YYHBT/WmM1RNGmsBsfbXieq%2bARKyB68%2bGgqp3sK6G0AGRjW6QrQXil3P5qzUoz%2bXbaiH18XISgSWI%2b%2bxc/ymNnqIg6ZOJ2E3GIA%2b7xadsgObh74KXDqDVNEM3FcGPBPTv0ciki3/Oyd/5NpddfiUzr3uWZFLSsHwl9U4Ru5WvZq8eWxaWNYq//LeIRi%2bBaxppdBMsN1UMFQHWemyNlFdIqfmMmM2Wb17KAxvwr7/9nSEjRzJi12FbPb99BqGFRqsMUsdwgjjW%2bxyLYf68dzjlrxczJdwgrKgTUKWKcLUglo6QcTcUyYWhIBnsQIQ6zDaKLIkFUYBrDH978HV%2b%2baeFWzw26tcy8NImHK8QKVds9bqeFkQzAq1ckD7ZmjbrxJWhRMsiFDWsUeX0v3QdCMWPLhhLxhTw/PPdGDWggSGF64hIk61m3eaBbR3FeGmsjiDDkFlNgmBRA04owS8Ed4OrwncK8YK1oEJ6NHyG1galJOMveoMzTzuGB//xNtpZwdSD4uzVY2vZEnLek2txCh08AkLbhPVcSos8hNn6aLsVGmMVKojg2DS%2b5%2bDYDKef%2bmNOuOoa7tuGsNqljRUJEriZMsDBdxsQJoanHVxRu2lHRidRW6i%2bQpUhVhgnI3syc/bWi1wlfDJk0AKM3ka9KdI8e8pPmfnTmxHh1kusmO8TuAJlfVKqfKObaqxTD1ZQGHRDhDF26FvEqd%2bXLJzXm%2bVLPF6YUYz3/ly0brs2Q%2bilkX4MKTMsr%2buN8EN6//BKqlWE1o5VAM82YhyB9S3Xn1DBpdOuBsBxXf700BNc%2bPOfce55UznikLHbeG4IheLZF19gbX09dQ3V1NfXc%2budt%2bGqrdcJMZPGMSFe6JPt46aR1iJtkganeJuaaBdhpaNppNeIIIWwoMICCAR%2bWITdqFCMRwN0kGn2wLU1aFrEEJQzeL9z%2bfnvZm/9pqYBI0Ii8SjBRu8f3JjGqCGSsrghpCPbmNpufQgVGodYUNP2KxTCKFCWmPchr19Ywr%2beOpiiZAU77LaKAgQDdkjTqylAqrZvqreCrNtdQvW6gL%2bdOZR/7vIkddEE1tso/TaDFhLhwX59V3P3rTdvyDApufzXlyMMzHxlzrYzxwqM2VRE24rXt8bSJGMINMoEWAOaOBHjo8LSbd62XapCT0uqPriDxjVvg3Ww0qIdjdCSiI21OfaiC49n6vUvgWWTHl3aSxE3mrSMooxEsOWhC0f5SBcqKrqRrNv670NYhwBBOmIpCLYuQhOXrFrTg6E3rOHW75dxxuANEZ5CGJQ1WDwIBSNLVnL6917jgvv2oJvR/OB7HxOs%2bAixMED4cXA3DFK7gcJEGsB4jBqwmpHuamRjhEzEB7dtJlsU0lgMAqPg9CFt7RCLxTjisGP4500PbEfu2M37D%2b3Ws77J9qHHxctJE8ciUBRhhIZIhJiz7fHKdhFWSIBwfJDdefWVJxFSZZ2XQqA3egvDYZN2JXHdyzQIgVF1wIYqozADgVA4BjauHoRVIAKsdBFGkF77KTrUjNx1EPNmLUMaQSS0ZCISZQRGgJbZPlzcaIRUeGEan5KtPotMO7jakiYkdeDBVK1%2bnoRYSyzlgecjLAj87EQL1%2bX6Q2r5/dONfPeQKEI57LB0NUY4KGejyAepwSikDQi97IrJiAwxP2tBLVyUCUFahAxbhhKlDPjFpEIOPeFcnv3n7S2Xm3TwRFa9vBPw7rYzaHO13jZcFQWplTihy2OPPkqfPutLKAtS0rNX723esn16hbaI0t5HUljucMcjS8EWtXjaXa2579//4e4bj245XifXogqL8SlDsb2j9RorQFuJq%2bqp/Pw1kB6DBvVh8OC%2bTDllHHEnSlqCMBJhwVk/JCdiSGoxDGyZiLolrBNgvVpEkGDM3hnCD3sQWbQOIR0wbdMqRUCvWIwHr3mVEw6fSHGYoaDJR2lF6G54RQoAYTFSJLHSQQWC0G37w1FG46ts7NfG7suePeqY9cf/ALe3%2bXzytyfDf7curPWO0U3zbOvWDorgyXMEI2pvwfOdrLNZaxCC8FOHzIRbiZRtecXn9ukVqipsogcioXhpQRWRYEMPJ3AhIqt58mmPt999l9pVqxg/uhf/XaSoRRDbzjFEKyxGCIQNUcn5hDWfsfPQvVqKeSHghltvbFmsdtayj/lY1%2bNpcIyPsC5%2bj1LUNkYARBBHhFGMqKGmugCnZCS9gvdJexmivptdCrKZlIoTkSnOHwbPvulzWrfleNZmnXAbZ1ykDhPAqkh/CnQNjm7b1otSi2cy%2bDKKZ9Nt0xQKTu25jrq6eoqLNzhTHbH1ah1AYnj4kSfoVuSxy86DN9hzG71u1w8ZN0CSrplNbG0TgTLNnS6LZx2WvD2dZPcxjBo9ZrPnb7%2bwRIhLCmMNgXDbjIxL7YF1kGgcLbCtHliGESImYMrkozjhvEs5/YjJjN1vLI8/8zGX3/Ii9Ubheh6RjIPv%2bIBqadgbG8sutG81Whg0tcR9WDz3XxhRwMN//XObJJ577rktf%2b%2by9APuXDybglCSzr5oEEuGjAlJOnGKTSPGsbh%2bAdCqoe0kwQuxyvL4P7rjmjTD%2bkZAZTDatAkXioYKYV1%2bdFiC0vNn839XZCNHpYigjI9tVZ2bwGN1bR92uXYpaWuxzZEOFoOw8MY1PRgaW0silcE6bduMgSO49IgoPzrvGv72l1aRHKq4%2bccmgGwpbVu3Wy1oN07V8g%2b4%2b447EEKxY99%2bHHvMYZRaL9uhoPl8K9p48jNuARHdSEzXAQI3sM3DZxIjQv560zT%2bsXo3Pnhn%2blcTlhGWjHQQkF3meuPVh1vEZGnd2QxNIRqJtpo/XvdLopGsY%2b7E40bQUFvNzfd/SmMoCJw00qpso9IqEBpHVqGlhy8kGCjVkg/m/xpjLAOHDGXMblteDuiQvrvw149mkXQMymaD%2bQTZ8GBfRIkYTSpisMbitipeZFqhQgcZJkAplBb4FFPclEKYEOtuKE20asAJEiScdciGNAWBB1JgZdgSptxiv0iGc%2b5bgi8l%2b985jURguHD0RHqWl6MEyKr/Ep91JsJmQ8BaI42gZ7c6nrr1b9BKWK7xMUI0t5ey92vtwBWAtSEXXngRFaWF/PneP/L5qtXc%2boff8u3YG4wvac4n0bwmRatzPdvAht/Q%2bi%2by9xACEpkgG6e2BbZbWF4ocXEJrcKzejOjX1s4z2aQsgnr2k18Wmf88ECaGhdx0z2fIiuGYGSANUGzG8IQ2goiNkXEX8mqxTNZUfkWnmlk5J4TmTVr%2blbvK4Tg0jGH8ssFzyJs21aGVYATJRJoQuEj9AYzmIRHXZAgKtZw9GnV9PCTJN9JkUg14qSKkKZVaSwt2AxguXx8GVLWYcMikA1g2ppW1BcwY50hLI/Ra6f%2blDoRDth33w0HDN6ZzFs/xnd8CvyNeolSIpCcNbKGma/M4YDx3wLAd0uJhhJtLMoR2WDCVqq0eMRtkowR7LRTP66%2bJusPWzj/HT55agGOWYWxunmK2ibeny2SkQojE1sdHvlCMe97De3DnM%2bqs5EL24kISrDCw2U5DakMEW/ToYQZM2Zw6GFHEqpiiorLsTYbH%2b7rFJm6KhzRAEZhnJBfXXwtv778F9t9/9vfeZGZNZ%2b3SXEfP8Cp/4Q7T/4tMjv030IPY2hCUiUizPjoEEp9n4KmIpqWL2XilNm0fk2ABSJIJCH1IsHUs/vz4D1LCGjEmrZuYOVpTEYw5oc/pceU0Tw48bs4G092tZbhrsvSjcyrRTZSI6ME%2b008kxlP/6H5eE2QbqIiUYRBNsdZbTg5iiVpDdPnLGK/MUM2sU3t8vcZMGA42shsdNt2jqNZaYlrSfnocSya%2b9Lm8/2LCGv2669R15jc7kzN2mqDH%2bXggw/e6szhNatWM//dBTz4x3v55%2bOPY63lgP0m8OMLz2Xo0GEMHDjgC917PefNfpLP66qxrkJgSIjsuwxrF7zHxMRi0oGDFQESB0%2bDtTFEoWHM3hmkrcUJigmDFLPeTKBRFPqaBgWSCMg0wrpIayip0Kxb7WCcgBUZjwUNvVrSoKwgGREU7z6S28cdSY944WbTuurzZSxYuGjzmdW8PtfEiRPbfP7cc89tsTEuhGCvvfahuHjz99vauVukuV1XUFTAvvts/u0anWKWzraw1jLlvw%2biQk0gJa41uEFA91iS75W/iefXkQqKSEQbybg%2bVoYUpT3in6QxPeNUlWu8II2hlO4Nmhrfx5ZJtKK5XrVYGRJaB2VSCGmZ3ziSR1K7t6RBWQsIJnffmdN33fvLPso3hk41YXVLCCH4w5ijaIgIPN9irUErgVEZkPW8t2gwf/tnEU88XkzEL8INEiT/%2bgnOyXNYfs7zFGZiGFFE2oHK056m4OjpuDMrQaRQ1iBFhtUrC3jswXIqlw/CEQrHSLyQls1RLsaGfG/YXh1tjq%2bFLiEsgB6JIk4rH0pTROJYjbAKoV0cLaivzU5MbaorJO0lMUJhM5KMTFFSL6mNZuO7o1ZTutwQmATJdSlCW4hFYnB5%2baVSalMVvPzKOjQOwtEYwYYNuH/f73b69d3X0yWqwtZcNudx3k024sp1DLJNnFf4Eg1ugspKRXmpQMeqqIsaooFH%2bUpBptRjXUKghaXQ18QbAhork0QGlOCYoNmtoGla15cX5mbYYw%2bX0m4rea9pJx6t3R%2bNwLOCK0ZPYEh5r6%2bc/m8KXabEWs%2bV3zqSeH2cRl2IVk34StPoGOI7alLxRkRYRlljGbFUnGRpAqMUFUlJRaNEWJdkLEG8Tx%2b0iNLoujTSk6Qqhe4NHDoxRc/S7Pt0tOmBqwXahZ2ihV1KVNAFSywAX2t%2b9MYDZFKGno1JFhf3QNqQUBgKtMEIh4y0%2bE6IMFEcI7JzCIRB2RAtBY62aCcNYSmoJFiLMFEkFp8mrCzEKp%2bStObeiaei2mnq1jeFLiksgM9qq7joradZGyul1E%2bijERLgzIhRrjZxrc2GKUJJQhrUVoSSIWWFoHAEjZPbQ7BxAncVHb0QGqEdcGkuWXMEfQvKv/qCf6G0WWFBfBp1WqueuNZaksUZlvD/a0QItvTXG%2b69Q1yrU3Lvqstx3YbzMmj9t3u63YmOt3Ca1%2bEgd17crgs54NXF%2bI3pWgdkmDMtsc3Nv5Ntt63UnDilSd39CN2GF1aWOl0mpdfmI6jPKy12%2b2BzgYFiE2Ob%2b1KsFazcOF7jBo1uqMfs0Po0lUhwOqVq5g/b35WJOstYTeIZP0677IljksgpUAqhVIK1TxEZYzBWkMY6paZxuMP3L/L%2bK02pssK69xzz0VKSSQSIWj16pKNhdASSIhoFk/zy5fEpnGZQjRPtG2%2bxPqluq%2b//npct3O/n3BjulYfuBXRaBTXdQnDECFEtvRRCilly2t8lVIEQYAQgoyfQSqJkALTvIKybf6nTfZ1KNoYTPNbw9a30YwxLFm8mHAbM4lWrlxJY2Pj9iT9m4HNs03efuttW1ZWZh3HsUopK6W0QoiWbf1%2b6/9bHyOltEopO2jgIPvJJ59scv1LL51mhRDW87yOftR2o8tWhdvDvHfmsfc%2be5PJZL76xVqRSCSYNWsWw4cPB6CiogdVVZXAtmPRvyl02apwa6RSKfrs2Jfdx%2bxOJpNBqfZ7GZNSimQyyciRIznllFOw1jJi%2bIiW7ztLdZgX1ka88MIMEokEn69Y3lJ6rJ/50x6sv5a1loceeohYLMaY3TfEbXUWYeWrwlZMmjiJ5194HqVUu4qpDS1dx/X7tLg5hBC8u%2bBddh2%2ba0eb4ivTJUssvZke2iknn8ILM17Ifp8LUQlACoQUSEchlaSkrIzddx/DgQceiJTZ5StXrFjxlW/1P0FH9x6%2bbo456mgrhLCjRo5q%2bezuu%2b9p6cEBX2hbf87GvcDW%2b%2bXl5fa0006zd955l1382eJN0lRdXW2llBawt916a0ebqF3ocsKKxWItojDG2IbGRuu67pcS1XpBrRdFeVm5Pfnkk%2b1jjz1ugyDY7jSlUumW%2b595xpkdbaJ2ocuNFf7sZxdx1VVXAnDC8Sfw1NNPtfW8y6xHff14IDTPNGreLy0pYeDAQew2ajRj9tiDE088geLiba8XtTWi0QhKKYQQTJo08Std63%2bFLtl4X%2b9hXz9E09oEQmXbOhXdK9hv3DjGjRvH2H3HMXq3Ue3qdtiYuW/PZe26dUyceHBHm6dd6JLC6tmzJ5WVldlxPykZOmQoZ//obKZOnYrjdLlCPCd0SWE1NTVRUFCAtRbX9fD99vWs5%2bmi7oZ4PJ4NhxEQhD6ffba4o5PU6eiSwgJ4Z%2b68lr8POOiAjk5Op6PLCmvEiOHE4tn1UY88YnJHJ6fT0SXbWK1Zu3Yt5eVdbxZNrunywsqTG7psVZgnt%2bSFlScn5IWVJyfkhZUnJ%2bSFlScn5IWVJyfkhZUnJ%2bSFlScn5IWVJyfkhZUnJ%2bSFlScn5IWVJyfkhZUnJ%2bSFlScn5IWVJyfkhZUnJ%2bSFlScn5IWVJyfkhZUnJ%2bSFlScn5IWVJyfkhZUnJ%2bSFlScn5IWVJyfkhZUnJ%2bSFlScn5IWVJyf8f03l6s50K6nRAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTI4VDExOjAwOjMzKzAyOjAwmirGtwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0yOFQxMTowMDozMyswMjowMOt3fgsAAAAASUVORK5CYII=' /%3e%3c/svg%3e";
 
 var ja = {
-	"mbitMore.name": "Boson",
+	"mbitMore.name": "MicroBit More",
 	"mbitMore.whenButtonEvent": "ボタン [NAME] が [EVENT] とき",
 	"mbitMore.buttonIDMenu.a": "A",
 	"mbitMore.buttonIDMenu.b": "B",
@@ -1458,7 +1458,7 @@ var ja = {
 	"mbitMore.selectCommunicationRoute.cancel": "やめる"
 };
 var pt = {
-	"mbitMore.name": "Boson",
+	"mbitMore.name": "MicroBit More",
 	"mbitMore.lightLevel": "Intensidade da Luz",
 	"mbitMore.compassHeading": "Está em direção ao Norte",
 	"mbitMore.magneticForce": "Força Magnética [AXIS]",
@@ -1473,7 +1473,7 @@ var pt = {
 var translations = {
 	ja: ja,
 	"ja-Hira": {
-	"mbitMore.name": "Boson",
+	"mbitMore.name": "MicroBit More",
 	"mbitMore.whenButtonEvent": "[NAME] ボタンが [EVENT] とき",
 	"mbitMore.buttonIDMenu.a": "A",
 	"mbitMore.buttonIDMenu.b": "B",
@@ -1561,7 +1561,7 @@ var translations = {
 	"mbitMore.selectCommunicationRoute.cancel": "やめる"
 },
 	"pt-br": {
-	"mbitMore.name": "Boson",
+	"mbitMore.name": "MicroBit More",
 	"mbitMore.lightLevel": "Intensidade da Luz",
 	"mbitMore.compassHeading": "Está em direção ao Norte",
 	"mbitMore.magneticForce": "Força Magnética [AXIS]",
@@ -4126,7 +4126,7 @@ var MbitMore = /*#__PURE__*/function () {
       return this.magneticForce[axis];
     }
     /**
-     * Start to scan Bluetooth LE devices to find micro:bit with Boson service.
+     * Start to scan Bluetooth LE devices to find micro:bit with MicroBit More service.
      */
 
   }, {
@@ -4172,7 +4172,7 @@ var MbitMore = /*#__PURE__*/function () {
       var label = document.createTextNode(formatMessage({
         id: 'mbitMore.selectCommunicationRoute.connectWith',
         default: 'Connect with',
-        description: 'label of select communication route dialog for Boson extension'
+        description: 'label of select communication route dialog for microbit more extension'
       }));
       dialogFace.appendChild(label); // Dialog form
 
@@ -4190,7 +4190,7 @@ var MbitMore = /*#__PURE__*/function () {
       bleOption.textContent = formatMessage({
         id: 'mbitMore.selectCommunicationRoute.bluetooth',
         default: 'Bluetooth',
-        description: 'bluetooth button on select communication route dialog for Boson extension'
+        description: 'bluetooth button on select communication route dialog for microbit more extension'
       });
       apiSelect.appendChild(bleOption); // USB option
 
@@ -4199,7 +4199,7 @@ var MbitMore = /*#__PURE__*/function () {
       usbOption.textContent = formatMessage({
         id: 'mbitMore.selectCommunicationRoute.usb',
         default: 'USB',
-        description: 'usb button on select communication route dialog for Boson extension'
+        description: 'usb button on select communication route dialog for microbit more extension'
       });
       apiSelect.appendChild(usbOption); // Cancel button
 
@@ -4207,7 +4207,7 @@ var MbitMore = /*#__PURE__*/function () {
       cancelButton.textContent = formatMessage({
         id: 'mbitMore.selectCommunicationRoute.cancel',
         default: 'cancel',
-        description: 'cancel button on select communication route dialog for Boson extension'
+        description: 'cancel button on select communication route dialog for microbit more extension'
       });
       cancelButton.style.margin = '8px';
       dialogFace.appendChild(cancelButton); // OK button
@@ -4216,7 +4216,7 @@ var MbitMore = /*#__PURE__*/function () {
       confirmButton.textContent = formatMessage({
         id: 'mbitMore.selectCommunicationRoute.connect',
         default: 'connect',
-        description: 'connect button on select communication route dialog for Boson extension'
+        description: 'connect button on select communication route dialog for microbit more extension'
       });
       confirmButton.style.margin = '8px';
       dialogFace.appendChild(confirmButton); // Add onClick action
@@ -4859,77 +4859,77 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.tiltUp',
           default: 'titl up',
-          description: 'label for tilt up gesture in gesture picker for Boson extension'
+          description: 'label for tilt up gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.TILT_UP
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.tiltDown',
           default: 'titl down',
-          description: 'label for tilt down gesture in gesture picker for Boson extension'
+          description: 'label for tilt down gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.TILT_DOWN
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.tiltLeft',
           default: 'titl left',
-          description: 'label for tilt left gesture in gesture picker for Boson extension'
+          description: 'label for tilt left gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.TILT_LEFT
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.tiltRight',
           default: 'titl right',
-          description: 'label for tilt right gesture in gesture picker for Boson extension'
+          description: 'label for tilt right gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.TILT_RIGHT
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.faceUp',
           default: 'face up',
-          description: 'label for face up gesture in gesture picker for Boson extension'
+          description: 'label for face up gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.FACE_UP
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.faceDown',
           default: 'face down',
-          description: 'label for face down gesture in gesture picker for Boson extension'
+          description: 'label for face down gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.FACE_DOWN
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.freefall',
           default: 'freefall',
-          description: 'label for freefall gesture in gesture picker for Boson extension'
+          description: 'label for freefall gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.FREEFALL
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.g3',
           default: '3G',
-          description: 'label for 3G gesture in gesture picker for Boson extension'
+          description: 'label for 3G gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.G3
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.g6',
           default: '6G',
-          description: 'label for 6G gesture in gesture picker for Boson extension'
+          description: 'label for 6G gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.G6
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.g8',
           default: '8G',
-          description: 'label for 3G gesture in gesture picker for Boson extension'
+          description: 'label for 3G gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.G8
       }, {
         text: formatMessage({
           id: 'mbitMore.gesturesMenu.shake',
           default: 'shake',
-          description: 'label for shaken gesture in gesture picker for Boson extension'
+          description: 'label for shaken gesture in gesture picker for microbit more extension'
         }),
         value: MbitMoreGestureName.SHAKE
       }];
@@ -4945,14 +4945,14 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
         text: formatMessage({
           id: 'mbitMore.buttonIDMenu.a',
           default: 'A',
-          description: 'label for "A" element in button picker for Boson extension'
+          description: 'label for "A" element in button picker for Microbit More extension'
         }),
         value: MbitMoreButtonName.A
       }, {
         text: formatMessage({
           id: 'mbitMore.buttonIDMenu.b',
           default: 'B',
-          description: 'label for "B" element in button picker for Boson extension'
+          description: 'label for "B" element in button picker for Microbit More extension'
         }),
         value: MbitMoreButtonName.B
       }];
@@ -5023,7 +5023,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
         text: formatMessage({
           id: 'mbitMore.touchIDMenu.logo',
           default: 'LOGO',
-          description: 'label for "LOGO" element in touch button picker for Boson extension'
+          description: 'label for "LOGO" element in touch button picker for Microbit More extension'
         }),
         value: MbitMoreButtonName.LOGO
       }, {
@@ -5119,14 +5119,14 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
         text: formatMessage({
           id: 'mbitMore.digitalValueMenu.Low',
           default: 'Low',
-          description: 'label for low value in digital output menu for Boson extension'
+          description: 'label for low value in digital output menu for microbit more extension'
         }),
         value: 'false'
       }, {
         text: formatMessage({
           id: 'mbitMore.digitalValueMenu.High',
           default: 'High',
-          description: 'label for high value in digital output menu for Boson extension'
+          description: 'label for high value in digital output menu for microbit more extension'
         }),
         value: 'true'
       }];
@@ -6646,7 +6646,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
     get: function get() {
       return formatMessage({
         id: 'mbitMore.name',
-        default: 'Boson',
+        default: 'MicroBit More',
         description: 'name of the extension'
       });
     }
