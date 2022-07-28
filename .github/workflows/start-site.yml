@@ -22,7 +22,7 @@ jobs:
         with:
           repository: eu-rate-boson/mbit
           ref: ${{github.event.inputs.branch}}
-          path: ./mbit-more-v2
+          path: ./mbit
       - run: npm install
         working-directory: ./mbit
       - run: npx xcratch-register --id=microbitMore --gui=../scratch-gui --block=./src/vm/extensions/block --entry=./src/gui/lib/libraries/extensions/entry --core --use=extension-support util io --url="https://eu-rate-boson.github.io/dist/microbitMore.mjs"
