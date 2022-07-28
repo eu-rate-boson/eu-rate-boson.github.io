@@ -67,7 +67,7 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
+define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
 
   /**
   * Welcome to your Workbox-powered service worker!
@@ -97,7 +97,7 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "9f37af3b8f67158faeae72520443dd98"
   }, {
     "url": "blocks-only.html",
-    "revision": "adba19ed6746f4b692afc48665e87ed3"
+    "revision": "721c36e1a0ddd0295995811d7f5e9d49"
   }, {
     "url": "chunks/blocksonly.js",
     "revision": "95531038cfa411c4a9204d64f40f04bf"
@@ -124,7 +124,7 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "b29852eae60ebb2d5390bdb279168b15"
   }, {
     "url": "compatibility-testing.html",
-    "revision": "bc200f2678114e50d2bb8c2bf9dc0765"
+    "revision": "95320a5c59c69ccdb93678e4e142cb8a"
   }, {
     "url": "https://assets.scratch.mit.edu/internalapi/asset/0015433a406a53f00b792424b823268c.png/get/",
     "revision": "0015433a406a53f00b792424b823268c"
@@ -4120,16 +4120,16 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "ff8b8c3bf841a11fd5fe3afaa92be1b5"
   }, {
     "url": "index.html",
-    "revision": "a93ba32a67950f762bc5343e6a24d3ab"
+    "revision": "cafcad7775b2193e8fc6bf90a8f99766"
   }, {
     "url": "lib.min.js",
-    "revision": "5f4991b82b841236316e7e33c1afb13d"
+    "revision": "6cf740c703730431af481cf5c2eb20c2"
   }, {
     "url": "lib.min.js.map",
-    "revision": "2bfa32016288cdb00f6ec2ae25cfa02d"
+    "revision": "69d457ebec01f80a09a4da8106cddb93"
   }, {
     "url": "player.html",
-    "revision": "36ca0ff4afd1a534052df6edb8800234"
+    "revision": "187af210e6c18b60c89490d8e66a6881"
   }, {
     "url": "static/assets/0136d7b1618e6d7ecaf97717bd128a05.jpg",
     "revision": "0136d7b1618e6d7ecaf97717bd128a05"
@@ -4164,9 +4164,6 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "url": "static/assets/10811a978de201353d564df7ba1ddb58.svg",
     "revision": "10811a978de201353d564df7ba1ddb58"
   }, {
-    "url": "static/assets/10aa2f52495a52d4ae59203c39127f15.svg",
-    "revision": "10aa2f52495a52d4ae59203c39127f15"
-  }, {
     "url": "static/assets/12e69a59db0f0c697eaaf1abbcad902f.svg",
     "revision": "12e69a59db0f0c697eaaf1abbcad902f"
   }, {
@@ -4178,6 +4175,9 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/148e4f4cfc7a1a253eb52c50bbb635a0.svg",
     "revision": "148e4f4cfc7a1a253eb52c50bbb635a0"
+  }, {
+    "url": "static/assets/149ba60de110329ae978eef139539407.svg",
+    "revision": "149ba60de110329ae978eef139539407"
   }, {
     "url": "static/assets/18b504b8572a14661279856a13522f25.svg",
     "revision": "18b504b8572a14661279856a13522f25"
@@ -4202,6 +4202,9 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/1fd3942fa102af8c13222be2ccc52e36.svg",
     "revision": "1fd3942fa102af8c13222be2ccc52e36"
+  }, {
+    "url": "static/assets/1fee82024e34cc0b9b84685f7ae32fbc.png",
+    "revision": "1fee82024e34cc0b9b84685f7ae32fbc"
   }, {
     "url": "static/assets/21739a7b303ece303b023791813412cb.svg",
     "revision": "21739a7b303ece303b023791813412cb"
@@ -4323,6 +4326,9 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "url": "static/assets/481fbac64b59203d7ddffa564a7537d8.svg",
     "revision": "481fbac64b59203d7ddffa564a7537d8"
   }, {
+    "url": "static/assets/493e77d059a1fa0fa90601a710bf43cd.svg",
+    "revision": "493e77d059a1fa0fa90601a710bf43cd"
+  }, {
     "url": "static/assets/497f797eeffe5fa7e6a626abc0db08a1.svg",
     "revision": "497f797eeffe5fa7e6a626abc0db08a1"
   }, {
@@ -4337,9 +4343,6 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/4da38973d5ffd15c54e80894d430288c.svg",
     "revision": "4da38973d5ffd15c54e80894d430288c"
-  }, {
-    "url": "static/assets/4e91dccc5b5e8d4017e35ff6b789b782.svg",
-    "revision": "4e91dccc5b5e8d4017e35ff6b789b782"
   }, {
     "url": "static/assets/504d73be1b361b4b9ca7f655ce085dc6.svg",
     "revision": "504d73be1b361b4b9ca7f655ce085dc6"
@@ -4364,9 +4367,6 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/582b9f12ce60392a8ef736c5dfabb4ce.svg",
     "revision": "582b9f12ce60392a8ef736c5dfabb4ce"
-  }, {
-    "url": "static/assets/59c535227d8831801967f96a7537817c.png",
-    "revision": "59c535227d8831801967f96a7537817c"
   }, {
     "url": "static/assets/59c79fa681b1421547664294a259b2d8.svg",
     "revision": "59c79fa681b1421547664294a259b2d8"
@@ -4397,6 +4397,9 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/63e5827c1506216bd7c9927a4e5eb558.svg",
     "revision": "63e5827c1506216bd7c9927a4e5eb558"
+  }, {
+    "url": "static/assets/647205fb102c6a257e04fe8de67f87b5.svg",
+    "revision": "647205fb102c6a257e04fe8de67f87b5"
   }, {
     "url": "static/assets/6608d56b3dce2738b2b137569d305d3b.png",
     "revision": "6608d56b3dce2738b2b137569d305d3b"
@@ -4610,9 +4613,6 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/c4ceba83cf15016aa9c2cf6c3b9c764b.jpg",
     "revision": "c4ceba83cf15016aa9c2cf6c3b9c764b"
-  }, {
-    "url": "static/assets/c6b29462f79d8eafcd438b2f9d402ad4.svg",
-    "revision": "c6b29462f79d8eafcd438b2f9d402ad4"
   }, {
     "url": "static/assets/c7ffd288176b935f835311512a224d4b.svg",
     "revision": "c7ffd288176b935f835311512a224d4b"
@@ -4960,13 +4960,13 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "15c01eb94658c32b995b97aea18aca08"
   }, {
     "url": "static/favicon.ico",
-    "revision": "3ff181ef22995f3ce56908d55ab959b9"
+    "revision": "c116e2a8305f312f988162b0b5115d67"
   }, {
     "url": "static/pwa-icon.png",
-    "revision": "02adcdb2b458adb3e027a92286e35d1d"
+    "revision": "97d1d6ab304c8c222e128ad2aec19c51"
   }, {
     "url": "static/pwa-maskable_icon.png",
-    "revision": "81f32c894f9f23538048df676fedb6bd"
+    "revision": "97d1d6ab304c8c222e128ad2aec19c51"
   }], {});
 
 }));
