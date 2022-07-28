@@ -20,15 +20,15 @@ jobs:
         working-directory: ./scratch-gui
       - uses: actions/checkout@v2
         with:
-          repository: eu-rate-boson/mbit-more-v2
+          repository: eu-rate-boson/mbit
           ref: ${{github.event.inputs.branch}}
           path: ./mbit-more-v2
       - run: npm install
-        working-directory: ./mbit-more-v2
+        working-directory: ./mbit
       - run: npx xcratch-register --id=microbitMore --gui=../scratch-gui --block=./src/vm/extensions/block --entry=./src/gui/lib/libraries/extensions/entry --core --use=extension-support util io --url="https://eu-rate-boson.github.io/dist/microbitMore.mjs"
-        working-directory: ./mbit-more-v2
+        working-directory: ./mbit
       - run: npx xcratch-build --module=microbitMore --gui=../scratch-gui --block=./src/vm/extensions/block --entry=./src/gui/lib/libraries/extensions/entry --url="https://eu-rate-boson.github.io/dist/microbitMore.mjs"
-        working-directory: ./mbit-more-v2
+        working-directory: ./mbit
       - uses: actions/checkout@v2
         with:
           repository: eu-rate-boson/eu-rate-boson.github.io
@@ -44,8 +44,8 @@ jobs:
           path: ./eu-rate-boson.github.io
       - run: mv -T ./eu-rate-boson.github.io/site ./public
       - run: mv -T ./scratch-gui/build ./public/editor
-      - run: mv -T ./mbit-more-v2/dist ./public/dist
-      - run: mv -T ./mbit-more-v2/examples ./public/examples
+      - run: mv -T ./mbit/dist ./public/dist
+      - run: mv -T ./mbit/examples ./public/examples
       - uses: actions/checkout@v2
         with:
           repository: eu-rate-boson/microbit-more-doc
