@@ -28,5 +28,5 @@ if (!webpackConfig.includes('watchOptions:')) {
         console.log(`Apply patch: dev_server.patch`);
     } catch (err) {
         console.log(err);
-    }
+    } 
 }
