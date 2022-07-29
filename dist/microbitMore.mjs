@@ -6646,7 +6646,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
     get: function get() {
       return formatMessage({
         id: 'mbitMore.name',
-        default: 'MicroBit More',
+        default: 'Boson',
         description: 'name of the extension'
       });
     }

@@ -1,7 +1,11 @@
-# What is Boson
+# What is Microbit More
 
-'Boson' is a Microbit extension and a mod programming environment for [Scratch by MIT](https://scratch.mit.edu/).
-      You can code using extended blocks for Microbit in the normal Scratch's way.
+'Microbit More' is a mod programming environment from [Scratch by MIT](https://scratch.mit.edu/).
+      You can code using extended blocks of 'Microbit More' in the normal Scratch's way.
+
+![](microbit_more-microbit_light-1024x768.jpg ':size=400')
+
+[](https://www.youtube.com/embed/etjPQkMToK8 ':include :type=iframe width=100% height=400px')
 
 ## System Requirements
 
@@ -29,7 +33,7 @@ However, the micro:bit v1.3, v1.5 cannot use blocks related to "data communicati
 - Safari (Using Scratch Link)
 
 #### iPad
-- [‎Scrub](https://apps.apple.com/jp/app/scrub-web-browser/id1569777095) <br>Enter https://eu-rate-boson.github.io/editor/ in the Home URL "Custom" field in the Settings screen.
+- [‎Scrub](https://apps.apple.com/jp/app/scrub-web-browser/id1569777095) <br>Enter https://microbit-more.github.io/editor/ in the Home URL "Custom" field in the Settings screen.
 ____
 ## Features
 
@@ -64,13 +68,18 @@ Outputs
 - Display text on LED
 - Play a sound with a specified frequency
 
+Extensions
+
+- Extensions by MakeCode
+
+
 ### Can be used offline
 
-The Eu-Rate Boson editor is a PWA (Progressive Web Apps), so you can use it offline.
+The Microbit More editor is a PWA (Progressive Web Apps), so you can use it offline.
 (See [how-to-use](how-to-use?id=use-it-offline))
 
 ____
 ## Changes
 
-- [Releases · eu-rate-boson/mbit-more-v2](https://github.com/eu-rate-boson/mbit-more-v2/releases)
-- [Releases · eu-rate-boson/pxt-mbit-more-v2](https://github.com/eu-rate-boson/pxt-mbit-more-v2/releases)
+- [Releases · microbit-more/mbit-more-v2](https://github.com/microbit-more/mbit-more-v2/releases)
+- [Releases · microbit-more/pxt-mbit-more-v2](https://github.com/microbit-more/pxt-mbit-more-v2/releases)
