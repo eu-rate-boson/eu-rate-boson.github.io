@@ -51,7 +51,6 @@ jobs:
           repository: eu-rate-boson/microbit-more-doc
           path: ./microbit-more-doc
       - run: mv -T ./microbit-more-doc/docs ./public/docs
-      - run: mv -T ./microbit-more-doc/docs-ja ./public/docs-ja
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
