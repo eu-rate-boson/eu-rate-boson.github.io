@@ -1,0 +1,47 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.5fb2cd621e475f0e9111bc23e97f746c.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon_512x512.5fb2cd621e475f0e9111bc23e97f746c.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_384x384.b6c9b022053e07d45b55e9dafe362f5b.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_256x256.90ac95f53c81627a6b6fe93145cb12af.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.1cc527b982475c867469e32917a45cb3.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_128x128.78abb96e9344c425be71263086e56438.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.ef3be182ec36ce27596a931cb347dee3.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Eu Rate Boson",
+  "short_name": "Eu Rate Boson",
+  "orientation": "any",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Scratch3 mod for micro:bit",
+  "background_color": "#ffffff"
+}
