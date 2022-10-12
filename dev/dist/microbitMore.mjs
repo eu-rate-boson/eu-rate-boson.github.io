@@ -5445,7 +5445,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
               menu: 'axis'
             }
           }
-        }, '---', {
+        }, {
           opcode: 'getAnalogValue',
           text: formatMessage({
             id: 'mbitMore.analogValue',
@@ -5459,7 +5459,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
               menu: 'analogInPins'
             }
           }
-        }, {
+        }, '---', {
           opcode: 'setPullMode',
           text: formatMessage({
             id: 'mbitMore.setPullMode',
