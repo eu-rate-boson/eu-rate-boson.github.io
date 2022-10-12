@@ -5428,8 +5428,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           arguments: {
             AXIS: {
               type: argumentType.STRING,
-              menu: 'axis',
-              defaultValue: AxisSymbol.Absolute
+              menu: 'axis'
             }
           }
         }, {
@@ -5443,11 +5442,10 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           arguments: {
             AXIS: {
               type: argumentType.STRING,
-              menu: 'axis',
-              defaultValue: AxisSymbol.X
+              menu: 'axis'
             }
           }
-        }, '---', {
+        }, {
           opcode: 'getAnalogValue',
           text: formatMessage({
             id: 'mbitMore.analogValue',
@@ -5458,11 +5456,10 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           arguments: {
             PIN: {
               type: argumentType.STRING,
-              menu: 'analogInPins',
-              defaultValue: '0'
+              menu: 'analogInPins'
             }
           }
-        }, {
+        }, '---', {
           opcode: 'setPullMode',
           text: formatMessage({
             id: 'mbitMore.setPullMode',
