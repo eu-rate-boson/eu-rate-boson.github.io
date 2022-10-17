@@ -5229,10 +5229,17 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
       return [{
         text: formatMessage({
           id: 'mbitMore.implementationsMenu.neopixel',
-          default: 'NeoPixel Leds',
-          description: 'label for NeoPixel Leds'
+          default: 'NeoPixel LEDs',
+          description: 'label for NeoPixel LEDs'
         }),
         value: 'neopixel'
+      }, {
+        text: formatMessage({
+          id: 'mbitMore.implementationsMenu.default',
+          default: 'None',
+          description: 'label for default empty case implementation'
+        }),
+        value: 'default'
       }];
     }
   }, {
@@ -5712,12 +5719,12 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           opcode: 'redirectNeopixel',
           text: formatMessage({
             id: 'mbitMore.redirectNeopixel',
-            default: 'To use [LABEL] click here',
+            default: 'To use [IMPLEMENTATION] click here',
             description: 'To use the NeoPixel led strip click here'
           }),
           blockType: blockType.REPORTER,
           arguments: {
-            LABEL: {
+            IMPLEMENTATION: {
               type: argumentType.STRING,
               menu: 'implementationsMenu',
               defaultValue: 'neopixel'
@@ -6488,13 +6495,16 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
     /**
      * Redirect to Neopixel Microbit Control with MakeCode.
      * @param {object} args - the block's arguments.
+     * @property {string} args.IMPLEMENTATION - the Implementation to check.
      * @return {string} string.
      */
   }, {
     key: "redirectNeopixel",
     value: function redirectNeopixel(args) {
-      window.open("https://makecode.microbit.org/79067-48667-65547-62218", "_blank");
-      return "NeoPixel with MicroBit";
+      if (args.IMPLEMENTATION === 'neopixel') {
+        window.open("https://makecode.microbit.org/79067-48667-65547-62218", "_blank");
+        return "NeoPixel with MicroBit";
+      } else return "None";
     }
   }], [{
     key: "formatMessage",
