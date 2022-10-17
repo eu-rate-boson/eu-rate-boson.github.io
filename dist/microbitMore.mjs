@@ -5697,10 +5697,16 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           opcode: 'redirectNeopixel',
           text: formatMessage({
             id: 'mbitMore.redirectNeopixel',
-            default: 'To use the NeoPixel led strip click here',
+            default: 'To use [LABEL] click here',
             description: 'To use the NeoPixel led strip click here'
           }),
-          blockType: blockType.REPORTER
+          blockType: blockType.REPORTER,
+          arguments: {
+            LABEL: {
+              type: argumentType.STRING,
+              defaultValue: 'NeoPixel Leds'
+            }
+          }
         }],
         menus: {
           buttonIDMenu: {
@@ -6462,7 +6468,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
     /**
      * Redirect to Neopixel Microbit Control with MakeCode.
      * @param {object} args - the block's arguments.
-     * @return {?string} null.
+     * @return {string} string.
      */
   }, {
     key: "redirectNeopixel",
@@ -6470,7 +6476,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
       if (hasAlreadyBeenRedirected == false) {
         window.open("https://makecode.microbit.org/79067-48667-65547-62218", "_blank");
         hasAlreadyBeenRedirected = true;
-        return null;
+        return "NeoPixel with MicroBit";
       }
     }
   }], [{
