@@ -3111,7 +3111,6 @@ var WebSerial = /*#__PURE__*/function () {
 }();
 var serialWeb = WebSerial;
 
-var hasAlreadyBeenRedirected = false;
 var uint8ArrayToBase64 = function uint8ArrayToBase64(array) {
   return window.btoa(String.fromCharCode.apply(String, _toConsumableArray(array)));
 };
@@ -5221,6 +5220,25 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
       }];
     }
   }, {
+    key: "IMPLEMENTATIONS_MENU",
+    get: function get() {
+      return [{
+        text: formatMessage({
+          id: 'mbitMore.implementationsMenu.neopixel',
+          default: 'NeoPixel LEDs',
+          description: 'label for NeoPixel LEDs'
+        }),
+        value: 'NEOPIXEL'
+      }, {
+        text: formatMessage({
+          id: 'mbitMore.implementationsMenu.none',
+          default: 'None',
+          description: 'label for default empty case implementation'
+        }),
+        value: 'NONE'
+      }];
+    }
+  }, {
     key: "getInfo",
     value: function getInfo() {
       setupTranslations();
@@ -5694,17 +5712,18 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
             }
           }
         }, '---', {
-          opcode: 'redirectNeopixel',
+          opcode: 'redirectImplementation',
           text: formatMessage({
-            id: 'mbitMore.redirectNeopixel',
-            default: 'To use [LABEL] click here',
+            id: 'mbitMore.redirectImplementation',
+            default: 'To use [IMPLEMENTATION] click here',
             description: 'To use the NeoPixel led strip click here'
           }),
           blockType: blockType.REPORTER,
           arguments: {
-            LABEL: {
+            IMPLEMENTATION: {
               type: argumentType.STRING,
-              defaultValue: 'NeoPixel Leds'
+              menu: 'implementationsMenu',
+              defaultValue: 'NEOPIXEL'
             }
           }
         }],
@@ -5764,6 +5783,10 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           connectionStateMenu: {
             acceptReporters: false,
             items: this.CONNECTION_STATE_MENU
+          },
+          implementationsMenu: {
+            acceptReporters: false,
+            items: this.IMPLEMENTATIONS_MENU
           }
         },
         translationMap: translations
@@ -6468,16 +6491,16 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
     /**
      * Redirect to Neopixel Microbit Control with MakeCode.
      * @param {object} args - the block's arguments.
+     * @property {string} args.IMPLEMENTATION - the Implementation to check.
      * @return {string} string.
      */
   }, {
     key: "redirectNeopixel",
     value: function redirectNeopixel(args) {
-      if (hasAlreadyBeenRedirected == false) {
+      if (args.IMPLEMENTATION === 'NEOPIXEL') {
         window.open("https://makecode.microbit.org/79067-48667-65547-62218", "_blank");
-        hasAlreadyBeenRedirected = true;
         return "NeoPixel with MicroBit";
-      }
+      } else return "None";
     }
   }], [{
     key: "formatMessage",
