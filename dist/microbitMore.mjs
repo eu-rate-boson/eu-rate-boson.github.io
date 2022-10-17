@@ -3111,6 +3111,7 @@ var WebSerial = /*#__PURE__*/function () {
 }();
 var serialWeb = WebSerial;
 
+var hasAlreadyBeenRedirected = false;
 var uint8ArrayToBase64 = function uint8ArrayToBase64(array) {
   return window.btoa(String.fromCharCode.apply(String, _toConsumableArray(array)));
 };
@@ -6466,8 +6467,11 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "redirectNeopixel",
     value: function redirectNeopixel(args) {
-      window.open("https://makecode.microbit.org/79067-48667-65547-62218", "_blank");
-      return null;
+      if (hasAlreadyBeenRedirected == false) {
+        window.open("https://makecode.microbit.org/79067-48667-65547-62218", "_blank");
+        hasAlreadyBeenRedirected = true;
+        return null;
+      }
     }
   }], [{
     key: "formatMessage",
