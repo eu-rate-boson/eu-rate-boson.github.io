@@ -6489,14 +6489,14 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
     }
 
     /**
-     * Redirect to Neopixel Microbit Control with MakeCode.
+     * Redirect to implementations.
      * @param {object} args - the block's arguments.
      * @property {string} args.IMPLEMENTATION - the Implementation to check.
      * @return {string} string.
      */
   }, {
-    key: "redirectNeopixel",
-    value: function redirectNeopixel(args) {
+    key: "redirectImplementation",
+    value: function redirectImplementation(args) {
       if (args.IMPLEMENTATION === 'NEOPIXEL') {
         window.open("https://makecode.microbit.org/79067-48667-65547-62218", "_blank");
         return "NeoPixel with MicroBit";
