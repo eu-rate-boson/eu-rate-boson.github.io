@@ -5228,14 +5228,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           default: 'NeoPixel LEDs',
           description: 'label for NeoPixel LEDs'
         }),
-        value: 'NEOPIXEL'
-      }, {
-        text: formatMessage({
-          id: 'mbitMore.implementationsMenu.none',
-          default: 'None',
-          description: 'label for default empty case implementation'
-        }),
-        value: 'NONE'
+        value: 'neopixel'
       }];
     }
   }, {
@@ -5723,7 +5716,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
             IMPLEMENTATION: {
               type: argumentType.STRING,
               menu: 'implementationsMenu',
-              defaultValue: 'NEOPIXEL'
+              defaultValue: 'neopixel'
             }
           }
         }],
@@ -6491,16 +6484,13 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
     /**
      * Redirect to implementations.
      * @param {object} args - the block's arguments.
-     * @property {string} args.IMPLEMENTATION - the Implementation to check.
      * @return {string} string.
      */
   }, {
     key: "redirectImplementation",
     value: function redirectImplementation(args) {
-      if (args.IMPLEMENTATION === 'NEOPIXEL') {
-        window.open("https://makecode.microbit.org/79067-48667-65547-62218", "_blank");
-        return "NeoPixel with MicroBit";
-      } else return "None";
+      window.open("https://makecode.microbit.org/79067-48667-65547-62218", "_blank");
+      return "NeoPixel with MicroBit";
     }
   }], [{
     key: "formatMessage",
