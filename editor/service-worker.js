@@ -97,7 +97,7 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "9f37af3b8f67158faeae72520443dd98"
   }, {
     "url": "blocks-only.html",
-    "revision": "721c36e1a0ddd0295995811d7f5e9d49"
+    "revision": "bab226707ebe45e70cf7e4aee8f1d04d"
   }, {
     "url": "chunks/blocksonly.js",
     "revision": "95531038cfa411c4a9204d64f40f04bf"
@@ -124,7 +124,7 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "b29852eae60ebb2d5390bdb279168b15"
   }, {
     "url": "compatibility-testing.html",
-    "revision": "95320a5c59c69ccdb93678e4e142cb8a"
+    "revision": "e1cf7a159e07dedf3eb745858e45b4e6"
   }, {
     "url": "https://assets.scratch.mit.edu/internalapi/asset/0015433a406a53f00b792424b823268c.png/get/",
     "revision": "0015433a406a53f00b792424b823268c"
@@ -4120,16 +4120,16 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "ff8b8c3bf841a11fd5fe3afaa92be1b5"
   }, {
     "url": "index.html",
-    "revision": "cafcad7775b2193e8fc6bf90a8f99766"
+    "revision": "a322c1acb42e7fa7f07f4722c01fb27a"
   }, {
     "url": "lib.min.js",
-    "revision": "55acb42b7291b65ba148a7807a83de61"
+    "revision": "973275586a55589e82aff701596eb29c"
   }, {
     "url": "lib.min.js.map",
-    "revision": "cf9fdf55af29162e1b06f7380adb4606"
+    "revision": "f33e6c1389a83e0df83809cb0aaf78a4"
   }, {
     "url": "player.html",
-    "revision": "187af210e6c18b60c89490d8e66a6881"
+    "revision": "045bc1e5d62b75f8d55826cf7391b78b"
   }, {
     "url": "static/assets/0136d7b1618e6d7ecaf97717bd128a05.jpg",
     "revision": "0136d7b1618e6d7ecaf97717bd128a05"
@@ -4176,9 +4176,6 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "url": "static/assets/148e4f4cfc7a1a253eb52c50bbb635a0.svg",
     "revision": "148e4f4cfc7a1a253eb52c50bbb635a0"
   }, {
-    "url": "static/assets/149ba60de110329ae978eef139539407.svg",
-    "revision": "149ba60de110329ae978eef139539407"
-  }, {
     "url": "static/assets/18b504b8572a14661279856a13522f25.svg",
     "revision": "18b504b8572a14661279856a13522f25"
   }, {
@@ -4202,9 +4199,6 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/1fd3942fa102af8c13222be2ccc52e36.svg",
     "revision": "1fd3942fa102af8c13222be2ccc52e36"
-  }, {
-    "url": "static/assets/1fee82024e34cc0b9b84685f7ae32fbc.png",
-    "revision": "1fee82024e34cc0b9b84685f7ae32fbc"
   }, {
     "url": "static/assets/21739a7b303ece303b023791813412cb.svg",
     "revision": "21739a7b303ece303b023791813412cb"
@@ -4290,6 +4284,9 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "url": "static/assets/3cfc9b39a0d002246119d47f6756d77e.svg",
     "revision": "3cfc9b39a0d002246119d47f6756d77e"
   }, {
+    "url": "static/assets/3d6e59224b236afabf9c413acd21db09.svg",
+    "revision": "3d6e59224b236afabf9c413acd21db09"
+  }, {
     "url": "static/assets/3d9e2585d6ed12b9fb994438e0c4c42a.svg",
     "revision": "3d9e2585d6ed12b9fb994438e0c4c42a"
   }, {
@@ -4325,9 +4322,6 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/481fbac64b59203d7ddffa564a7537d8.svg",
     "revision": "481fbac64b59203d7ddffa564a7537d8"
-  }, {
-    "url": "static/assets/493e77d059a1fa0fa90601a710bf43cd.svg",
-    "revision": "493e77d059a1fa0fa90601a710bf43cd"
   }, {
     "url": "static/assets/497f797eeffe5fa7e6a626abc0db08a1.svg",
     "revision": "497f797eeffe5fa7e6a626abc0db08a1"
@@ -4377,6 +4371,9 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "url": "static/assets/5c74b2c74fb87685d69914f6af840bc2.jpg",
     "revision": "5c74b2c74fb87685d69914f6af840bc2"
   }, {
+    "url": "static/assets/5d35cf5e0191258e5ccca3915b85c84a.png",
+    "revision": "5d35cf5e0191258e5ccca3915b85c84a"
+  }, {
     "url": "static/assets/5dbf111a76a93a93613ec81c16dfc6d3.svg",
     "revision": "5dbf111a76a93a93613ec81c16dfc6d3"
   }, {
@@ -4397,9 +4394,6 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/63e5827c1506216bd7c9927a4e5eb558.svg",
     "revision": "63e5827c1506216bd7c9927a4e5eb558"
-  }, {
-    "url": "static/assets/647205fb102c6a257e04fe8de67f87b5.svg",
-    "revision": "647205fb102c6a257e04fe8de67f87b5"
   }, {
     "url": "static/assets/6608d56b3dce2738b2b137569d305d3b.png",
     "revision": "6608d56b3dce2738b2b137569d305d3b"
@@ -4457,6 +4451,9 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/80ad76114d0b3f2fc54a3756dd283a53.svg",
     "revision": "80ad76114d0b3f2fc54a3756dd283a53"
+  }, {
+    "url": "static/assets/8195cb6fb9b01358e1af4faaa8672bc8.svg",
+    "revision": "8195cb6fb9b01358e1af4faaa8672bc8"
   }, {
     "url": "static/assets/81d5d1258558641e78d425193753207c.svg",
     "revision": "81d5d1258558641e78d425193753207c"
@@ -4625,6 +4622,9 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/cc0065f74161f7e7859b31796aaa3345.svg",
     "revision": "cc0065f74161f7e7859b31796aaa3345"
+  }, {
+    "url": "static/assets/cc024820ca42160b4bd9c3088e30d3a7.svg",
+    "revision": "cc024820ca42160b4bd9c3088e30d3a7"
   }, {
     "url": "static/assets/ce5820b006d753e4133f46ae776f4d96.svg",
     "revision": "ce5820b006d753e4133f46ae776f4d96"
@@ -4960,13 +4960,13 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "15c01eb94658c32b995b97aea18aca08"
   }, {
     "url": "static/favicon.ico",
-    "revision": "c116e2a8305f312f988162b0b5115d67"
+    "revision": "d2f0b78de3bb3a469d8bff231bfb2b15"
   }, {
     "url": "static/pwa-icon.png",
-    "revision": "97d1d6ab304c8c222e128ad2aec19c51"
+    "revision": "02613ec18645c2d06c9334594007f914"
   }, {
     "url": "static/pwa-maskable_icon.png",
-    "revision": "97d1d6ab304c8c222e128ad2aec19c51"
+    "revision": "02613ec18645c2d06c9334594007f914"
   }], {});
 
 }));
