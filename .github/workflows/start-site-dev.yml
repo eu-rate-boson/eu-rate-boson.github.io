@@ -9,13 +9,18 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix: 
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [16, 18, 20]
     steps:
       - uses: actions/checkout@v3
         with:
           repository: xcratch/scratch-gui
           ref: xcratch
           path: ./scratch-gui
+          node-version: ${{ matrix.node-version }}
       - run: npm install
         working-directory: ./scratch-gui
       - uses: actions/checkout@v3
@@ -23,6 +28,7 @@ jobs:
           repository: eu-rate-boson/mbit-more-v2
           ref: ${{github.event.inputs.branch}}
           path: ./mbit-more-v2
+          node-version: ${{ matrix.node-version }}
       - run: npm install
         working-directory: ./mbit-more-v2
       - run: npx xcratch-register --id=microbitMore --gui=../scratch-gui --block=./src/vm/extensions/block --entry=./src/gui/lib/libraries/extensions/entry --core --use=extension-support util io --url="https://eu-rate-boson.github.io/dev/dist/microbitMore.mjs"
@@ -34,6 +40,7 @@ jobs:
           repository: eu-rate-boson/eu-rate-boson.github.io
           ref: develop
           path: ./eu-rate-boson.github.io
+          node-version: ${{ matrix.node-version }}
       - run: node ./scripts/tailoring.js -gui=../scratch-gui
         working-directory: ./eu-rate-boson.github.io
       - run: npm run build
@@ -42,7 +49,7 @@ jobs:
         with:
           repository: eu-rate-boson/eu-rate-boson.github.io
           path: ./eu-rate-boson.github.io
-          node-version: '16'
+          node-version: ${{ matrix.node-version }}
       - run: mv -T ./eu-rate-boson.github.io/site ./public
       - run: mv -T ./scratch-gui/build ./public/editor
       - run: mv -T ./mbit-more-v2/dist ./public/dist
@@ -51,6 +58,7 @@ jobs:
         with:
           repository: eu-rate-boson/microbit-more-doc
           path: ./microbit-more-doc
+          node-version: ${{ matrix.node-version }}
       - run: mv -T ./microbit-more-doc/docs ./public/docs
       - uses: peaceiris/actions-gh-pages@v3
         with:
@@ -58,3 +66,4 @@ jobs:
           publish_dir: ./public
           destination_dir: ./dev
           keep_files: false
+          node-version: ${{ matrix.node-version }}
