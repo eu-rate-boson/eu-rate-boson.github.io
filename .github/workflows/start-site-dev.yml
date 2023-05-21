@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Branch of microbit-more'
+        description: 'Branch of eu-rate-boson'
         default: 'develop'
         required: true
 
@@ -42,6 +42,7 @@ jobs:
         with:
           repository: eu-rate-boson/eu-rate-boson.github.io
           path: ./eu-rate-boson.github.io
+          node-version: '16'
       - run: mv -T ./eu-rate-boson.github.io/site ./public
       - run: mv -T ./scratch-gui/build ./public/editor
       - run: mv -T ./mbit-more-v2/dist ./public/dist
