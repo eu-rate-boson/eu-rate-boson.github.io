@@ -4,7 +4,7 @@ on:
     inputs:
       branch:
         description: 'Branch of eu-rate-boson'
-        default: 'master'
+        default: 'develop'
         required: true
 
 jobs:
