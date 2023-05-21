@@ -1,4 +1,4 @@
-name: Start Dev Site
+name: Start Site
 on:
   workflow_dispatch:
     inputs:
