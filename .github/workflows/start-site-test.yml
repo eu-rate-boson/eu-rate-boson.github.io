@@ -7,29 +7,39 @@ on:
         default: "xcratch"
         required: true
       microBitMore:
-        description: "Branch of eu-rate-boson"
+        description: "Branch of mbit-more-v2"
         default: "master"
         required: true
       dev:
         description: "Publish for development"
         type: boolean
-        default: true
+        default: false
         required: true
 
 jobs:
   build-deploy:
+    name: Build deploy (Node ${{ matrix.node-version}}, ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       matrix: 
         os: [ubuntu-latest]
         node-version: [16]
     steps:
+      - name: Clean cache
+        run: npm cache clean --force
+      - name: Verify clean cache
+        run: npm cache verify
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version}}
+      - name: Export node options
+        run: export NODE_OPTIONS=--openssl-legacy-provider
       - name: Inputs
         run: echo "${{ toJSON(inputs) }}"
       - name: checkout scratch-gui
         uses: actions/checkout@v3
         with:
-          node-version: ${{ matrix.node-version }}
           repository: xcratch/scratch-gui
           ref: ${{ inputs.xcratch }}
           path: ./scratch-gui
@@ -38,7 +48,6 @@ jobs:
       - name: checkout microBitMore
         uses: actions/checkout@v3
         with:
-          node-version: ${{ matrix.node-version }}
           repository: eu-rate-boson/mbit-more-v2
           ref: ${{ inputs.microBitMore }}
           path: ./mbit-more-v2
