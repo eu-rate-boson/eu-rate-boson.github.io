@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix: 
         os: [ubuntu-latest]
-        node-version: [18]
+        node-version: [16, 18]
     steps:
       - name: Export node options
         run: export NODE_OPTIONS=--openssl-legacy-provider
@@ -48,7 +48,6 @@ jobs:
       - name: tailoring (Node ${{ matrix.node-version}}, ${{ matrix.os }})
         run: node ./scripts/tailoring.js -gui=../scratch-gui
         working-directory: ./eu-rate-boson.github.io
-      - run: npx browserslist@latest --update-db
       - name: Build scratch-gui (Node ${{ matrix.node-version}}, ${{ matrix.os }})
         run: npm run build
         working-directory: ./scratch-gui
