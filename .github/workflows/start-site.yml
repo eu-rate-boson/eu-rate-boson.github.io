@@ -16,7 +16,7 @@ jobs:
         node-version: [16, 18]
     steps:
       - name: Clean cache
-        run: npm cache clean
+        run: npm cache clean --force
       - name: Verify clean cache
         run: npm cache verify
       - name: Use Node.js
