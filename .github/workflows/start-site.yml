@@ -28,7 +28,6 @@ jobs:
         working-directory: ./scratch-gui
       - uses: actions/checkout@v3
         with:
-          node-version: ${{ matrix.node-version }}
           repository: eu-rate-boson/mbit-more-v2
           ref: ${{github.event.inputs.branch}}
           path: ./mbit-more-v2
@@ -73,7 +72,6 @@ jobs:
         run: mv -T ./microbit-more-doc/docs ./public/docs
       - uses: peaceiris/actions-gh-pages@v3
         with:
-          node-version: ${{ matrix.node-version }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           destination_dir: ./dev
