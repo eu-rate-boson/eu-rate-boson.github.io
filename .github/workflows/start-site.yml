@@ -33,6 +33,7 @@ jobs:
       - name: Install mbit-more-v2 (Node ${{ matrix.node-version}}, ${{ matrix.os }})
         run: npm install
         working-directory: ./mbit-more-v2
+      - run: npx browserslist@latest --update-db
       - name: xcratch-register (Node ${{ matrix.node-version}}, ${{ matrix.os }})
         run: npx xcratch-register --id=microbitMore --gui=../scratch-gui --block=./src/vm/extensions/block --entry=./src/gui/lib/libraries/extensions/entry --core --use=extension-support util io --url="https://eu-rate-boson.github.io/dev/dist/microbitMore.mjs"
         working-directory: ./mbit-more-v2
@@ -41,7 +42,6 @@ jobs:
         working-directory: ./mbit-more-v2
       - uses: actions/checkout@v3
         with:
-          node-version: ${{ matrix.node-version }}
           repository: eu-rate-boson/eu-rate-boson.github.io
           ref: develop
           path: ./eu-rate-boson.github.io
@@ -53,7 +53,6 @@ jobs:
         working-directory: ./scratch-gui
       - uses: actions/checkout@v3
         with:
-          node-version: ${{ matrix.node-version }}
           repository: eu-rate-boson/eu-rate-boson.github.io
           path: ./eu-rate-boson.github.io
       - name: Move eu-rate-boson.github.io
@@ -66,7 +65,6 @@ jobs:
         run: mv -T ./mbit-more-v2/examples ./public/examples
       - uses: actions/checkout@v3
         with:
-          node-version: ${{ matrix.node-version }}
           repository: eu-rate-boson/microbit-more-doc
           path: ./microbit-more-doc
       - name: Move microbit-more-doc
