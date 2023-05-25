@@ -2,84 +2,98 @@ name: Start Site
 on:
   workflow_dispatch:
     inputs:
-      branch:
-        description: 'Branch of eu-rate-boson'
-        default: 'master'
+      xcratch:
+        description: "Branch of Xcratch"
+        default: "xcratch"
         required: true
+      microBitMore:
+        description: "Branch of mbit-more-v2"
+        default: "master"
+        required: true
+      dev:
+        description: "Publish for development"
+        type: boolean
+        default: true
+        required: true
+
 jobs:
   build-deploy:
     name: Build deploy (Node ${{ matrix.node-version}}, ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       matrix: 
-        os: [ubuntu-latest]
-        node-version: [16]
+          os: [ubuntu-latest]
+          node-version: [16]
     steps:
-      - name: Clean cache
-        run: npm cache clean --force
-      - name: Verify clean cache
-        run: npm cache verify
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version}}
       - name: Export node options
         run: export NODE_OPTIONS=--openssl-legacy-provider
-      - uses: actions/checkout@v3
+      - name: Inputs
+        run: echo "${{ toJSON(inputs) }}"
+      - name: checkout scratch-gui
+        uses: actions/checkout@v3
         with:
           repository: xcratch/scratch-gui
-          ref: xcratch
+          ref: ${{ inputs.xcratch }}
           path: ./scratch-gui
-      - name: Install scratch-gui (Node ${{ matrix.node-version}}, ${{ matrix.os }})
-        run: npm install
+      - run: npm install
         working-directory: ./scratch-gui
-      - uses: actions/checkout@v3
+      - name: checkout microBitMore
+        uses: actions/checkout@v3
         with:
           repository: eu-rate-boson/mbit-more-v2
-          ref: ${{github.event.inputs.branch}}
+          ref: ${{ inputs.microBitMore }}
           path: ./mbit-more-v2
-      - name: Install mbit-more-v2 (Node ${{ matrix.node-version}}, ${{ matrix.os }})
-        run: npm install
+      - run: npm install
         working-directory: ./mbit-more-v2
-      - name: xcratch-register (Node ${{ matrix.node-version}}, ${{ matrix.os }})
-        run: npx xcratch-register --id=microbitMore --gui=../scratch-gui --block=./src/vm/extensions/block --entry=./src/gui/lib/libraries/extensions/entry --core --use=extension-support util io --url="https://eu-rate-boson.github.io/dev/dist/microbitMore.mjs"
+      - name: register for dev
+        if: ${{ inputs.dev }}
+        run: npm run register -- --url="https://eu-rate-boson.github.io/dev/dist/microbitMore.mjs"
         working-directory: ./mbit-more-v2
-      - name: xcratch-build (Node ${{ matrix.node-version}}, ${{ matrix.os }})
-        run: npx xcratch-build --module=microbitMore --gui=../scratch-gui --block=./src/vm/extensions/block --entry=./src/gui/lib/libraries/extensions/entry --url="https://eu-rate-boson.github.io/dev/dist/microbitMore.mjs"
+      - name: register
+        if: ${{ !inputs.dev }}
+        run: npm run register -- --url="https://eu-rate-boson.github.io/dist/microbitMore.mjs"
         working-directory: ./mbit-more-v2
-      - uses: actions/checkout@v3
+      - name: checkout site
+        uses: actions/checkout@v3
         with:
           repository: eu-rate-boson/eu-rate-boson.github.io
-          ref: develop
+          ref: main
           path: ./eu-rate-boson.github.io
-      - name: tailoring (Node ${{ matrix.node-version}}, ${{ matrix.os }})
-        run: node ./scripts/tailoring.js -gui=../scratch-gui
+      - run: node ./scripts/tailoring.js -gui=../scratch-gui
         working-directory: ./eu-rate-boson.github.io
-      - name: Build scratch-gui (Node ${{ matrix.node-version}}, ${{ matrix.os }})
-        run: npm run build
+      - run: npm run build
         working-directory: ./scratch-gui
       - uses: actions/checkout@v3
         with:
           repository: eu-rate-boson/eu-rate-boson.github.io
           path: ./eu-rate-boson.github.io
-      - name: Move eu-rate-boson.github.io
-        run: mv -T ./eu-rate-boson.github.io/site ./public
-      - name: Move scratch-gui
-        run: mv -T ./scratch-gui/build ./public/editor
-      - name: Move mbit-more-v2/dist
-        run: mv -T ./mbit-more-v2/dist ./public/dist
-      - name: Move mbit-more-v2/examples
-        run: mv -T ./mbit-more-v2/examples ./public/examples
+      - run: mv -T ./eu-rate-boson.github.io/site ./public
+      - run: mv -T ./scratch-gui/build ./public/editor
+      - run: mv -T ./mbit-more-v2/dist ./public/dist
+      - run: mv -T ./mbit-more-v2/examples ./public/examples
       - uses: actions/checkout@v3
         with:
           repository: eu-rate-boson/microbit-more-doc
           path: ./microbit-more-doc
-      - name: Move microbit-more-doc
-        run: mv -T ./microbit-more-doc/docs ./public/docs
-      - uses: peaceiris/actions-gh-pages@v3
+      - run: mv -T ./microbit-more-doc/docs ./public/docs
+      - run: mv -T ./microbit-more-doc/docs-ja ./public/docs-ja
+      - name: publish for dev
+        if: ${{ inputs.dev }}
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           destination_dir: ./dev
           keep_files: false
-          
+      - name: publish
+        if: ${{ !inputs.dev }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          destination_dir: .
+          keep_files: true
