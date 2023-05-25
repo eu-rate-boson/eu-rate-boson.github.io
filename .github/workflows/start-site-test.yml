@@ -22,13 +22,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix: 
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, windows-lates]
         node-version: [16]
     steps:
-      - name: Clean cache
-        run: npm cache clean --force
-      - name: Verify clean cache
-        run: npm cache verify
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
