@@ -20,7 +20,7 @@ index 91a492d1c..743cf44b6 100644
  
  const onClickLogo = () => {
 -    window.location = 'https://scratch.mit.edu';
-+    window.location = 'https://microbit-more.github.io/';
++    window.location = 'https://eu-rate-boson.github.io/';
  };
  
  const handleTelemetryModalCancel = () => {
