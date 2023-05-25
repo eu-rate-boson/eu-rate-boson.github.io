@@ -22,7 +22,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix: 
-        os: [ubuntu-latest, windows-lates]
+        os: [ubuntu-latest]
         node-version: [16]
     steps:
       - name: Use Node.js
