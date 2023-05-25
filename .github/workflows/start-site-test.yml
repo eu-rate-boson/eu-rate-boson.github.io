@@ -1,4 +1,4 @@
-name: Start Site Test
+name: Start Site
 on:
   workflow_dispatch:
     inputs:
@@ -13,7 +13,7 @@ on:
       dev:
         description: "Publish for development"
         type: boolean
-        default: false
+        default: true
         required: true
 
 jobs:
@@ -22,8 +22,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix: 
-        os: [ubuntu-latest]
-        node-version: [16]
+          os: [ubuntu-latest]
+          node-version: [16]
     steps:
       - name: Use Node.js
         uses: actions/setup-node@v3
@@ -80,6 +80,7 @@ jobs:
           repository: eu-rate-boson/microbit-more-doc
           path: ./microbit-more-doc
       - run: mv -T ./microbit-more-doc/docs ./public/docs
+      - run: mv -T ./microbit-more-doc/docs-ja ./public/docs-ja
       - name: publish for dev
         if: ${{ inputs.dev }}
         uses: peaceiris/actions-gh-pages@v3
