@@ -80,7 +80,6 @@ jobs:
           repository: eu-rate-boson/microbit-more-doc
           path: ./microbit-more-doc
       - run: mv -T ./microbit-more-doc/docs ./public/docs
-      - run: mv -T ./microbit-more-doc/docs-ja ./public/docs-ja
       - name: publish for dev
         if: ${{ inputs.dev }}
         uses: peaceiris/actions-gh-pages@v3
