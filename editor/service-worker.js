@@ -97,7 +97,7 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "9f37af3b8f67158faeae72520443dd98"
   }, {
     "url": "blocks-only.html",
-    "revision": "adf27a78370118c4d9f8b86fb5ab207a"
+    "revision": "c446b7f29b4035a8ad8fe87423804ba8"
   }, {
     "url": "chunks/blocksonly.js",
     "revision": "95531038cfa411c4a9204d64f40f04bf"
@@ -124,7 +124,7 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "b29852eae60ebb2d5390bdb279168b15"
   }, {
     "url": "compatibility-testing.html",
-    "revision": "4afefe09d154dd2bbc0e25bd2678af7f"
+    "revision": "dc9a2ace371c2e87be232932b408b5d8"
   }, {
     "url": "https://assets.scratch.mit.edu/internalapi/asset/0015433a406a53f00b792424b823268c.png/get/",
     "revision": "0015433a406a53f00b792424b823268c"
@@ -4120,16 +4120,16 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "ff8b8c3bf841a11fd5fe3afaa92be1b5"
   }, {
     "url": "index.html",
-    "revision": "70f69e9acf0603d949a4a34b17700c2a"
+    "revision": "4397c2621da2fbe520fb3b69738e3797"
   }, {
     "url": "lib.min.js",
-    "revision": "9c646b3a0d1255bc7e89591ccbb4163c"
+    "revision": "e903d127efbe4ff61068b1c8fb403948"
   }, {
     "url": "lib.min.js.map",
-    "revision": "b77ae209324848d5e698221d282bd670"
+    "revision": "3f7ecc1f5241d9a83944ed1629602690"
   }, {
     "url": "player.html",
-    "revision": "2a2dc3e589e8942fb4a571a8054660b4"
+    "revision": "a51bd6215cba29d18d9239359766dcee"
   }, {
     "url": "static/assets/0136d7b1618e6d7ecaf97717bd128a05.jpg",
     "revision": "0136d7b1618e6d7ecaf97717bd128a05"
@@ -4502,6 +4502,9 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
   }, {
     "url": "static/assets/993a0700d8a0972d309307b0a4688ed7.svg",
     "revision": "993a0700d8a0972d309307b0a4688ed7"
+  }, {
+    "url": "static/assets/9a6a409dbc30a7635e47b1831ddf9a7e.png",
+    "revision": "9a6a409dbc30a7635e47b1831ddf9a7e"
   }, {
     "url": "static/assets/9c49ade683c0f0d75796136ff5d1030f.svg",
     "revision": "9c49ade683c0f0d75796136ff5d1030f"
