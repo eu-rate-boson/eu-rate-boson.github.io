@@ -9,33 +9,25 @@ var img$1 = "data:image/svg+xml,%3c%3fxml version='1.0' standalone='no'%3f%3e%3c
 var formatMessage$1 = function formatMessage(messageData) {
   return messageData.defaultMessage;
 };
-var version = 'v2-0.2.4';
-var translationMap = {
-  'it': {
-    'gui.extension.microbitMore.description': "Gioca con tutte le funzioni di Microbit. (".concat(version, ")")
-  },
-  'en': {
-    'gui.extension.microbitMore.description': "Play with all functions of micro:bit. (".concat(version, ")")
-  },
-  'ja': {
-    'gui.extension.microbitMore.description': "micro:bit\u306E\u3059\u3079\u3066\u306E\u6A5F\u80FD\u3067\u904A\u3076\u3002 (".concat(version, ")")
-  },
-  'ja-Hira': {
-    'gui.extension.microbitMore.description': "\u30DE\u30A4\u30AF\u30ED\u30D3\u30C3\u30C8\u306E\u3059\u3079\u3066\u306E\u304D\u306E\u3046\u3067\u3042\u305D\u3076\u3002 (".concat(version, ")")
-  }
-};
+var version = 'v2-0.2.5';
 var entry = {
-  name: 'Boson',
+  get name() {
+    return "".concat(formatMessage$1({
+      defaultMessage: 'Boson',
+      description: 'Name of this extension',
+      id: 'mbitMore.entry.name'
+    }), " (").concat(version, ")");
+  },
   extensionId: 'microbitMore',
   extensionURL: 'https://eu-rate-boson.github.io/dev/dist/microbitMore.mjs',
-  collaborator: 'Scuola di Robotica',
+  collaborator: 'Simone davi',
   iconURL: img$4,
   insetIconURL: img$3,
   get description() {
     return formatMessage$1({
       defaultMessage: 'Play with all functions of micro:bit.',
-      description: "Description for the 'Microbit More' extension",
-      id: 'gui.extension.microbitMore.description'
+      description: "Description for the 'Eurate Boson' extension",
+      id: 'mbitMore.entry.description'
     });
   },
   featured: true,
@@ -57,7 +49,7 @@ var entry = {
   setFormatMessage: function setFormatMessage(formatter) {
     formatMessage$1 = formatter;
   },
-  translationMap: translationMap
+  translationMap: translations
 };
 
 function _arrayWithHoles(arr) {
@@ -121,22 +113,22 @@ function _classCallCheck(instance, Constructor) {
   }
 }
 
-function _typeof(obj) {
+function _typeof$1(obj) {
   "@babel/helpers - typeof";
 
-  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+  return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
     return typeof obj;
   } : function (obj) {
     return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-  }, _typeof(obj);
+  }, _typeof$1(obj);
 }
 
 function _toPrimitive(input, hint) {
-  if (_typeof(input) !== "object" || input === null) return input;
+  if (_typeof$1(input) !== "object" || input === null) return input;
   var prim = input[Symbol.toPrimitive];
   if (prim !== undefined) {
     var res = prim.call(input, hint || "default");
-    if (_typeof(res) !== "object") return res;
+    if (_typeof$1(res) !== "object") return res;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
   return (hint === "string" ? String : Number)(input);
@@ -144,7 +136,7 @@ function _toPrimitive(input, hint) {
 
 function _toPropertyKey(arg) {
   var key = _toPrimitive(arg, "string");
-  return _typeof(key) === "symbol" ? key : String(key);
+  return _typeof$1(key) === "symbol" ? key : String(key);
 }
 
 function _defineProperties(target, props) {
@@ -1698,7 +1690,7 @@ var ja = {
 	"mbitMore.selectCommunicationRoute.connect": "つなぐ",
 	"mbitMore.selectCommunicationRoute.cancel": "やめる"
 };
-var translations = {
+var translations$1 = {
 	de: de,
 	pt: pt,
 	fr: fr,
@@ -1840,7 +1832,7 @@ function _inherits(subClass, superClass) {
 }
 
 function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+  if (call && (_typeof$1(call) === "object" || typeof call === "function")) {
     return call;
   } else if (call !== void 0) {
     throw new TypeError("Derived constructors may only return object or undefined");
@@ -2519,6 +2511,378 @@ var ble$1 = navigator.bluetooth ? WebBLE : BLE$1;
 var BLE = ble$1;
 var ble = BLE;
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+      args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+      _next(undefined);
+    });
+  };
+}
+
+var regeneratorRuntime$1 = {exports: {}};
+
+var _typeof = {exports: {}};
+
+(function (module) {
+  function _typeof(obj) {
+    "@babel/helpers - typeof";
+
+    return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+      return typeof obj;
+    } : function (obj) {
+      return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(obj);
+  }
+  module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
+})(_typeof);
+
+(function (module) {
+  var _typeof$1 = _typeof.exports["default"];
+  function _regeneratorRuntime() {
+
+    /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+    module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
+      return exports;
+    }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+    var exports = {},
+      Op = Object.prototype,
+      hasOwn = Op.hasOwnProperty,
+      defineProperty = Object.defineProperty || function (obj, key, desc) {
+        obj[key] = desc.value;
+      },
+      $Symbol = "function" == typeof Symbol ? Symbol : {},
+      iteratorSymbol = $Symbol.iterator || "@@iterator",
+      asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
+      toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+    function define(obj, key, value) {
+      return Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+      }), obj[key];
+    }
+    try {
+      define({}, "");
+    } catch (err) {
+      define = function define(obj, key, value) {
+        return obj[key] = value;
+      };
+    }
+    function wrap(innerFn, outerFn, self, tryLocsList) {
+      var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
+        generator = Object.create(protoGenerator.prototype),
+        context = new Context(tryLocsList || []);
+      return defineProperty(generator, "_invoke", {
+        value: makeInvokeMethod(innerFn, self, context)
+      }), generator;
+    }
+    function tryCatch(fn, obj, arg) {
+      try {
+        return {
+          type: "normal",
+          arg: fn.call(obj, arg)
+        };
+      } catch (err) {
+        return {
+          type: "throw",
+          arg: err
+        };
+      }
+    }
+    exports.wrap = wrap;
+    var ContinueSentinel = {};
+    function Generator() {}
+    function GeneratorFunction() {}
+    function GeneratorFunctionPrototype() {}
+    var IteratorPrototype = {};
+    define(IteratorPrototype, iteratorSymbol, function () {
+      return this;
+    });
+    var getProto = Object.getPrototypeOf,
+      NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+    NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
+    var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
+    function defineIteratorMethods(prototype) {
+      ["next", "throw", "return"].forEach(function (method) {
+        define(prototype, method, function (arg) {
+          return this._invoke(method, arg);
+        });
+      });
+    }
+    function AsyncIterator(generator, PromiseImpl) {
+      function invoke(method, arg, resolve, reject) {
+        var record = tryCatch(generator[method], generator, arg);
+        if ("throw" !== record.type) {
+          var result = record.arg,
+            value = result.value;
+          return value && "object" == _typeof$1(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
+            invoke("next", value, resolve, reject);
+          }, function (err) {
+            invoke("throw", err, resolve, reject);
+          }) : PromiseImpl.resolve(value).then(function (unwrapped) {
+            result.value = unwrapped, resolve(result);
+          }, function (error) {
+            return invoke("throw", error, resolve, reject);
+          });
+        }
+        reject(record.arg);
+      }
+      var previousPromise;
+      defineProperty(this, "_invoke", {
+        value: function value(method, arg) {
+          function callInvokeWithMethodAndArg() {
+            return new PromiseImpl(function (resolve, reject) {
+              invoke(method, arg, resolve, reject);
+            });
+          }
+          return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+        }
+      });
+    }
+    function makeInvokeMethod(innerFn, self, context) {
+      var state = "suspendedStart";
+      return function (method, arg) {
+        if ("executing" === state) throw new Error("Generator is already running");
+        if ("completed" === state) {
+          if ("throw" === method) throw arg;
+          return doneResult();
+        }
+        for (context.method = method, context.arg = arg;;) {
+          var delegate = context.delegate;
+          if (delegate) {
+            var delegateResult = maybeInvokeDelegate(delegate, context);
+            if (delegateResult) {
+              if (delegateResult === ContinueSentinel) continue;
+              return delegateResult;
+            }
+          }
+          if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
+            if ("suspendedStart" === state) throw state = "completed", context.arg;
+            context.dispatchException(context.arg);
+          } else "return" === context.method && context.abrupt("return", context.arg);
+          state = "executing";
+          var record = tryCatch(innerFn, self, context);
+          if ("normal" === record.type) {
+            if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
+            return {
+              value: record.arg,
+              done: context.done
+            };
+          }
+          "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
+        }
+      };
+    }
+    function maybeInvokeDelegate(delegate, context) {
+      var methodName = context.method,
+        method = delegate.iterator[methodName];
+      if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
+      var record = tryCatch(method, delegate.iterator, context.arg);
+      if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
+      var info = record.arg;
+      return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
+    }
+    function pushTryEntry(locs) {
+      var entry = {
+        tryLoc: locs[0]
+      };
+      1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
+    }
+    function resetTryEntry(entry) {
+      var record = entry.completion || {};
+      record.type = "normal", delete record.arg, entry.completion = record;
+    }
+    function Context(tryLocsList) {
+      this.tryEntries = [{
+        tryLoc: "root"
+      }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
+    }
+    function values(iterable) {
+      if (iterable) {
+        var iteratorMethod = iterable[iteratorSymbol];
+        if (iteratorMethod) return iteratorMethod.call(iterable);
+        if ("function" == typeof iterable.next) return iterable;
+        if (!isNaN(iterable.length)) {
+          var i = -1,
+            next = function next() {
+              for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
+              return next.value = undefined, next.done = !0, next;
+            };
+          return next.next = next;
+        }
+      }
+      return {
+        next: doneResult
+      };
+    }
+    function doneResult() {
+      return {
+        value: undefined,
+        done: !0
+      };
+    }
+    return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
+      value: GeneratorFunctionPrototype,
+      configurable: !0
+    }), defineProperty(GeneratorFunctionPrototype, "constructor", {
+      value: GeneratorFunction,
+      configurable: !0
+    }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
+      var ctor = "function" == typeof genFun && genFun.constructor;
+      return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
+    }, exports.mark = function (genFun) {
+      return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
+    }, exports.awrap = function (arg) {
+      return {
+        __await: arg
+      };
+    }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+      return this;
+    }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+      void 0 === PromiseImpl && (PromiseImpl = Promise);
+      var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
+      return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
+        return result.done ? result.value : iter.next();
+      });
+    }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
+      return this;
+    }), define(Gp, "toString", function () {
+      return "[object Generator]";
+    }), exports.keys = function (val) {
+      var object = Object(val),
+        keys = [];
+      for (var key in object) keys.push(key);
+      return keys.reverse(), function next() {
+        for (; keys.length;) {
+          var key = keys.pop();
+          if (key in object) return next.value = key, next.done = !1, next;
+        }
+        return next.done = !0, next;
+      };
+    }, exports.values = values, Context.prototype = {
+      constructor: Context,
+      reset: function reset(skipTempReset) {
+        if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
+      },
+      stop: function stop() {
+        this.done = !0;
+        var rootRecord = this.tryEntries[0].completion;
+        if ("throw" === rootRecord.type) throw rootRecord.arg;
+        return this.rval;
+      },
+      dispatchException: function dispatchException(exception) {
+        if (this.done) throw exception;
+        var context = this;
+        function handle(loc, caught) {
+          return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
+        }
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i],
+            record = entry.completion;
+          if ("root" === entry.tryLoc) return handle("end");
+          if (entry.tryLoc <= this.prev) {
+            var hasCatch = hasOwn.call(entry, "catchLoc"),
+              hasFinally = hasOwn.call(entry, "finallyLoc");
+            if (hasCatch && hasFinally) {
+              if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+              if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+            } else if (hasCatch) {
+              if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+            } else {
+              if (!hasFinally) throw new Error("try statement without catch or finally");
+              if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+            }
+          }
+        }
+      },
+      abrupt: function abrupt(type, arg) {
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+            var finallyEntry = entry;
+            break;
+          }
+        }
+        finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
+        var record = finallyEntry ? finallyEntry.completion : {};
+        return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
+      },
+      complete: function complete(record, afterLoc) {
+        if ("throw" === record.type) throw record.arg;
+        return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
+      },
+      finish: function finish(finallyLoc) {
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
+        }
+      },
+      "catch": function _catch(tryLoc) {
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          if (entry.tryLoc === tryLoc) {
+            var record = entry.completion;
+            if ("throw" === record.type) {
+              var thrown = record.arg;
+              resetTryEntry(entry);
+            }
+            return thrown;
+          }
+        }
+        throw new Error("illegal catch attempt");
+      },
+      delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+        return this.delegate = {
+          iterator: values(iterable),
+          resultName: resultName,
+          nextLoc: nextLoc
+        }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
+      }
+    }, exports;
+  }
+  module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
+})(regeneratorRuntime$1);
+
+// TODO(Babel 8): Remove this file.
+
+var runtime = regeneratorRuntime$1.exports();
+var regenerator = runtime;
+
+// Copied from https://github.com/facebook/regenerator/blob/main/packages/runtime/runtime.js#L736=
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  if ((typeof globalThis === "undefined" ? "undefined" : _typeof$1(globalThis)) === "object") {
+    globalThis.regeneratorRuntime = runtime;
+  } else {
+    Function("r", "regeneratorRuntime = r")(runtime);
+  }
+}
+
 var log = log$2;
 var uint8ArrayToBase64$1 = function uint8ArrayToBase64(array) {
   return window.btoa(String.fromCharCode.apply(String, _toConsumableArray(array)));
@@ -2709,7 +3073,7 @@ var WebSerial = /*#__PURE__*/function () {
               });
             } else {
               // Error occurred
-              log.debug(this.chunks); // debug
+              // log.debug(this.chunks); // debug
               this.chunks.shift(); // Remove current SFD
               return;
             }
@@ -2747,27 +3111,48 @@ var WebSerial = /*#__PURE__*/function () {
      */
   }, {
     key: "disconnect",
-    value: function disconnect() {
-      var _this3 = this;
-      if (this.state !== 'open') return Promise.resolve();
-      this.state = 'closing';
-      this.stopReceiving();
-      return this.reader.cancel().then(function () {
-        return _this3.readableStreamClosed.catch(function () {/* Ignore the error */});
-      }).then(function () {
-        _this3.writer.close();
-        _this3.writer.releaseLock();
-        return _this3.write.closed;
-      }).then(function () {
-        _this3.port.close();
-        _this3.state = 'close';
-        _this3.reader = null;
-        _this3.writer = null;
-        _this3.port = null;
-        _this3._runtime.emit(_this3._runtime.constructor.PERIPHERAL_DISCONNECTED);
-      });
-    }
-
+    value: function () {
+      var _disconnect = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee() {
+        return regenerator.wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              if (!(this.state !== 'open')) {
+                _context.next = 2;
+                break;
+              }
+              return _context.abrupt("return");
+            case 2:
+              this.state = 'closing';
+              this.stopReceiving();
+              _context.next = 6;
+              return this.reader.cancel();
+            case 6:
+              _context.next = 8;
+              return this.readableStreamClosed.catch(function () {/* Ignore the error */});
+            case 8:
+              this.writer.close();
+              _context.next = 11;
+              return this.writer.closed;
+            case 11:
+              _context.next = 13;
+              return this.port.close();
+            case 13:
+              this.state = 'close';
+              this.reader = null;
+              this.writer = null;
+              this.port = null;
+              this._runtime.emit(this._runtime.constructor.PERIPHERAL_DISCONNECTED);
+            case 18:
+            case "end":
+              return _context.stop();
+          }
+        }, _callee, this);
+      }));
+      function disconnect() {
+        return _disconnect.apply(this, arguments);
+      }
+      return disconnect;
+    }()
     /**
      * @return {bool} whether the peripheral is connected.
      */
@@ -2784,23 +3169,23 @@ var WebSerial = /*#__PURE__*/function () {
   }, {
     key: "receiveData",
     value: function receiveData() {
-      var _this4 = this;
+      var _this3 = this;
       return this.reader.read().then(function (result) {
         var value = result.value,
           done = result.done;
         if (done) {
-          _this4.reader.releaseLock();
+          _this3.reader.releaseLock();
         }
         if (value) {
           var data = value.data;
           var ch = value.ch;
-          if (!_this4.chValues[ch]) {
-            _this4.chValues[ch] = {};
+          if (!_this3.chValues[ch]) {
+            _this3.chValues[ch] = {};
           }
-          _this4.chValues[ch][data.type] = data.value;
+          _this3.chValues[ch][data.type] = data.value;
           if (data.type === ChResponse.NOTIFY) {
-            if (ch in _this4.notifyListeners) {
-              _this4.notifyListeners[ch](uint8ArrayToBase64$1(data.value));
+            if (ch in _this3.notifyListeners) {
+              _this3.notifyListeners[ch](uint8ArrayToBase64$1(data.value));
             }
           }
           // log.debug({ch: ch, type: data.type, value: data.value});
@@ -2814,14 +3199,14 @@ var WebSerial = /*#__PURE__*/function () {
   }, {
     key: "startReceiving",
     value: function startReceiving() {
-      var _this5 = this;
+      var _this4 = this;
       this.dataReceiving = window.setTimeout(function () {
-        if (_this5.state !== 'open') return;
-        _this5.receiveData().then(function () {
+        if (_this4.state !== 'open') return;
+        _this4.receiveData().then(function () {
           // start again
-          _this5.startReceiving();
+          _this4.startReceiving();
         }).catch(function () {
-          _this5.handleDisconnectError();
+          _this4.handleDisconnectError();
         });
       }, this.receivingInterval);
     }
@@ -2844,14 +3229,14 @@ var WebSerial = /*#__PURE__*/function () {
   }, {
     key: "sendData",
     value: function sendData(data) {
-      var _this6 = this;
+      var _this5 = this;
       return this.writer.ready.then(function () {
-        return _this6.writer.write(data);
+        return _this5.writer.write(data);
       }).then(function () {
         return new Promise(function (resolve) {
           setTimeout(function () {
             return resolve();
-          }, _this6.sendDataInterval); // Wait for receiving process in micro:bit
+          }, _this5.sendDataInterval); // Wait for receiving process in micro:bit
         });
       });
     }
@@ -2875,7 +3260,7 @@ var WebSerial = /*#__PURE__*/function () {
   }, {
     key: "readCh",
     value: function readCh(ch) {
-      var _this7 = this;
+      var _this6 = this;
       if (this.state !== 'open') {
         return Promise.reject(new Error('port is not opened'));
       }
@@ -2885,13 +3270,13 @@ var WebSerial = /*#__PURE__*/function () {
         dataFrame[1] = ChRequest.READ;
         dataFrame[2] = ch >> 8;
         dataFrame[3] = ch & 0xFF;
-        if (_this7.chValues[ch]) {
-          _this7.chValues[ch][ChResponse.READ] = null;
+        if (_this6.chValues[ch]) {
+          _this6.chValues[ch][ChResponse.READ] = null;
         }
-        _this7.sendData(dataFrame).then(function () {
+        _this6.sendData(dataFrame).then(function () {
           var checkInterval = 10;
           var check = function check(count) {
-            var received = _this7.chValues[ch];
+            var received = _this6.chValues[ch];
             if (received && received[ChResponse.READ]) {
               return resolve({
                 message: uint8ArrayToBase64$1(received[ChResponse.READ])
@@ -2905,7 +3290,7 @@ var WebSerial = /*#__PURE__*/function () {
               check(count);
             }, checkInterval);
           };
-          check(20);
+          check(50);
         });
       });
     }
@@ -2922,7 +3307,7 @@ var WebSerial = /*#__PURE__*/function () {
   }, {
     key: "read",
     value: function read(serviceId, characteristicId) {
-      var _this8 = this;
+      var _this7 = this;
       var optStartNotifications = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
       var onCharacteristicChanged = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
       var ch = SERIAL_CH_ID[characteristicId];
@@ -2945,10 +3330,10 @@ var WebSerial = /*#__PURE__*/function () {
             log.debug("read ch: ".concat(ch, " dose not response"));
             return;
           }
-          _this8.readCh(ch).then(function (result) {
+          _this7.readCh(ch).then(function (result) {
             if (result) {
               if (optStartNotifications) {
-                _this8.startNotifications(serviceId, characteristicId, onCharacteristicChanged).then(function () {
+                _this7.startNotifications(serviceId, characteristicId, onCharacteristicChanged).then(function () {
                   return resolve(result);
                 });
                 return;
@@ -2968,7 +3353,7 @@ var WebSerial = /*#__PURE__*/function () {
       };
       return readRetry(2).catch(function (err) {
         log.debug(err);
-        _this8.handleDisconnectError(err);
+        _this7.handleDisconnectError(err);
         return;
       });
     }
@@ -2983,7 +3368,7 @@ var WebSerial = /*#__PURE__*/function () {
   }, {
     key: "writeCh",
     value: function writeCh(ch, value, withResponse) {
-      var _this9 = this;
+      var _this8 = this;
       if (this.state !== 'open') {
         return Promise.reject(new Error('port is not opened'));
       }
@@ -2999,10 +3384,10 @@ var WebSerial = /*#__PURE__*/function () {
           return acc + cur;
         }) % 0xFF;
         if (withResponse) {
-          _this9.sendData(dataFrame).then(function () {
+          _this8.sendData(dataFrame).then(function () {
             var checkInterval = 10;
             var check = function check(count) {
-              var received = _this9.chValues[ch];
+              var received = _this8.chValues[ch];
               if (received && received[ChResponse.WRITE_RESPONSE]) {
                 return resolve(received[ChResponse.WRITE_RESPONSE][0] === 1);
               }
@@ -3017,7 +3402,7 @@ var WebSerial = /*#__PURE__*/function () {
             check(20);
           });
         } else {
-          _this9.sendData(dataFrame).then(function () {
+          _this8.sendData(dataFrame).then(function () {
             return resolve(true);
           });
         }
@@ -3037,10 +3422,10 @@ var WebSerial = /*#__PURE__*/function () {
   }, {
     key: "write",
     value: function write(serviceId, characteristicId, message) {
-      var _this10 = this;
+      var _this9 = this;
       var encoding = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
       var withResponse = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
-      withResponse = true; // "response" is always required for noise tolerance on serial-port.
+      withResponse = false; // true for noise tolerance on serial-port.
       var value = encoding === 'base64' ? base64ToUint8Array$1(message) : message;
       var ch = SERIAL_CH_ID[characteristicId];
       if (this.chValues[ch]) {
@@ -3053,7 +3438,7 @@ var WebSerial = /*#__PURE__*/function () {
             log.debug("write ch: ".concat(ch, " dose not response"));
             return;
           }
-          _this10.writeCh(ch, value, withResponse).then(function (result) {
+          _this9.writeCh(ch, value, withResponse).then(function (result) {
             if (result) {
               resolve(result);
               return;
@@ -3070,7 +3455,7 @@ var WebSerial = /*#__PURE__*/function () {
       };
       return writeRetry(2).catch(function (err) {
         log.debug(err);
-        _this10.handleDisconnectError(err);
+        _this9.handleDisconnectError(err);
         return;
       });
     }
@@ -3090,15 +3475,15 @@ var WebSerial = /*#__PURE__*/function () {
     key: "handleDisconnectError",
     value: function handleDisconnectError( /* e */
     ) {
-      var _this11 = this;
+      var _this10 = this;
       if (this.state !== 'open') return;
       this.disconnect().then(function () {
-        if (_this11._resetCallback) {
-          _this11._resetCallback();
+        if (_this10._resetCallback) {
+          _this10._resetCallback();
         }
-        _this11._runtime.emit(_this11._runtime.constructor.PERIPHERAL_CONNECTION_LOST_ERROR, {
+        _this10._runtime.emit(_this10._runtime.constructor.PERIPHERAL_CONNECTION_LOST_ERROR, {
           message: "Scratch lost connection to",
-          extensionId: _this11._extensionId
+          extensionId: _this10._extensionId
         });
       });
     }
@@ -3147,7 +3532,7 @@ var formatMessage = function formatMessage(messageData) {
 var setupTranslations = function setupTranslations() {
   var localeSetup = formatMessage.setup();
   if (localeSetup && localeSetup.translations[localeSetup.locale]) {
-    Object.assign(localeSetup.translations[localeSetup.locale], translations[localeSetup.locale]);
+    Object.assign(localeSetup.translations[localeSetup.locale], translations$1[localeSetup.locale]);
   }
 };
 var EXTENSION_ID = 'microbitMore';
@@ -3907,7 +4292,7 @@ var MbitMore = /*#__PURE__*/function () {
     }
 
     /**
-     * Configurate microphone.
+     * Configure microphone.
      * @param {boolean} use - true to use microphone.
      * @param {object} util - utility object provided by the runtime.
      * @return {?Promise} - a Promise that resolves state of the microphone or undefined if the process was yield.
@@ -4132,103 +4517,6 @@ var MbitMore = /*#__PURE__*/function () {
     }
 
     /**
-     * Open dialog to selector communication route [BLE | USB Serial]
-     */
-  }, {
-    key: "selectCommunicationRoute",
-    value: function selectCommunicationRoute() {
-      var _this7 = this;
-      var selectDialog = document.createElement('dialog');
-      selectDialog.style.padding = '0px';
-      var dialogFace = document.createElement('div');
-      dialogFace.style.padding = '16px';
-      selectDialog.appendChild(dialogFace);
-      var label = document.createTextNode(formatMessage({
-        id: 'mbitMore.selectCommunicationRoute.connectWith',
-        default: 'Connect with',
-        description: 'label of select communication route dialog for microbit more extension'
-      }));
-      dialogFace.appendChild(label);
-      // Dialog form
-      var selectForm = document.createElement('form');
-      selectForm.setAttribute('method', 'dialog');
-      selectForm.style.margin = '8px';
-      dialogFace.appendChild(selectForm);
-      // API select
-      var apiSelect = document.createElement('select');
-      apiSelect.setAttribute('id', 'api');
-      selectForm.appendChild(apiSelect);
-      // BLE option
-      var bleOption = document.createElement('option');
-      bleOption.setAttribute('value', 'ble');
-      bleOption.textContent = formatMessage({
-        id: 'mbitMore.selectCommunicationRoute.bluetooth',
-        default: 'Bluetooth',
-        description: 'bluetooth button on select communication route dialog for microbit more extension'
-      });
-      apiSelect.appendChild(bleOption);
-      // USB option
-      var usbOption = document.createElement('option');
-      usbOption.setAttribute('value', 'usb');
-      usbOption.textContent = formatMessage({
-        id: 'mbitMore.selectCommunicationRoute.usb',
-        default: 'USB',
-        description: 'usb button on select communication route dialog for microbit more extension'
-      });
-      apiSelect.appendChild(usbOption);
-      // Cancel button
-      var cancelButton = document.createElement('button');
-      cancelButton.textContent = formatMessage({
-        id: 'mbitMore.selectCommunicationRoute.cancel',
-        default: 'cancel',
-        description: 'cancel button on select communication route dialog for microbit more extension'
-      });
-      cancelButton.style.margin = '8px';
-      dialogFace.appendChild(cancelButton);
-      // OK button
-      var confirmButton = document.createElement('button');
-      confirmButton.textContent = formatMessage({
-        id: 'mbitMore.selectCommunicationRoute.connect',
-        default: 'connect',
-        description: 'connect button on select communication route dialog for microbit more extension'
-      });
-      confirmButton.style.margin = '8px';
-      dialogFace.appendChild(confirmButton);
-      // Add onClick action
-      var selectProcess = function selectProcess() {
-        if (apiSelect.value === 'ble') {
-          _this7.scanBLE();
-        }
-        if (apiSelect.value === 'usb') {
-          _this7.scanSerial();
-        }
-        document.body.removeChild(selectDialog);
-      };
-      cancelButton.onclick = function () {
-        document.body.removeChild(selectDialog);
-        _this7.runtime.emit(_this7.runtime.constructor.PERIPHERAL_REQUEST_ERROR, {
-          message: "Scan was canceled by user",
-          extensionId: _this7._extensionId
-        });
-      };
-      confirmButton.onclick = selectProcess;
-      selectDialog.addEventListener('keydown', function (e) {
-        if (e.code === 'Enter') {
-          selectProcess();
-        }
-      });
-      // Close when click outside of the dialog
-      // selectDialog.onclick = e => {
-      //     if (!e.target.closest('div')) {
-      //         e.target.close();
-      //         selectProcess();
-      //     }
-      // };
-      document.body.appendChild(selectDialog);
-      selectDialog.showModal();
-    }
-
-    /**
      * Whether the key is pressed at this moment.
      * @param {string} key - key in keyboard event
      * @returns {boolean} - return true when the key is pressed
@@ -4252,10 +4540,12 @@ var MbitMore = /*#__PURE__*/function () {
       }
       this.bleBusy = true;
       if ('serial' in navigator && this.isKeyPressing('Shift')) {
-        this.selectCommunicationRoute();
+        this.scanSerial();
       } else {
         this.scanBLE();
       }
+      // The key state is cleared because the keyup event will be dropped by the browser dialog.
+      this.keyState = {};
     }
 
     /**
@@ -4319,13 +4609,13 @@ var MbitMore = /*#__PURE__*/function () {
   }, {
     key: "sendCommand",
     value: function sendCommand(command) {
-      var _this8 = this;
+      var _this7 = this;
       var data = uint8ArrayToBase64(new Uint8Array([command.id].concat(_toConsumableArray(command.message))));
       return new Promise(function (resolve) {
-        _this8._ble.write(MM_SERVICE.ID, MM_SERVICE.COMMAND_CH, data, 'base64', false);
+        _this7._ble.write(MM_SERVICE.ID, MM_SERVICE.COMMAND_CH, data, 'base64', false);
         setTimeout(function () {
           return resolve();
-        }, _this8.sendCommandInterval);
+        }, _this7.sendCommandInterval);
       });
     }
 
@@ -4338,7 +4628,7 @@ var MbitMore = /*#__PURE__*/function () {
   }, {
     key: "sendCommandSet",
     value: function sendCommandSet(commands, util) {
-      var _this9 = this;
+      var _this8 = this;
       if (!this.isConnected()) return Promise.resolve();
       if (this.bleBusy) {
         this.bleAccessWaiting = true;
@@ -4346,7 +4636,7 @@ var MbitMore = /*#__PURE__*/function () {
           util.yield(); // re-try this call after a while.
         } else {
           setTimeout(function () {
-            return _this9.sendCommandSet(commands, util);
+            return _this8.sendCommandSet(commands, util);
           }, 1);
         }
         return; // Do not return Promise.resolve() to re-try.
@@ -4355,22 +4645,22 @@ var MbitMore = /*#__PURE__*/function () {
       this.bleBusy = true;
       // Clear busy and BLE access waiting flag when the scratch-link does not respond.
       this.bleBusyTimeoutID = window.setTimeout(function () {
-        _this9.bleBusy = false;
-        _this9.bleAccessWaiting = false;
+        _this8.bleBusy = false;
+        _this8.bleAccessWaiting = false;
       }, 1000);
       return new Promise(function (resolve) {
         commands.reduce(function (acc, cur) {
           return acc.then(function () {
-            return _this9.sendCommand(cur);
+            return _this8.sendCommand(cur);
           });
         }, Promise.resolve()).then(function () {
-          window.clearTimeout(_this9.bleBusyTimeoutID);
+          window.clearTimeout(_this8.bleBusyTimeoutID);
         }).catch(function (err) {
           log$2.log(err);
-          _this9._ble.handleDisconnectError(err);
+          _this8._ble.handleDisconnectError(err);
         }).finally(function () {
-          _this9.bleBusy = false;
-          _this9.bleAccessWaiting = false;
+          _this8.bleBusy = false;
+          _this8.bleAccessWaiting = false;
           resolve();
         });
       });
@@ -4382,37 +4672,37 @@ var MbitMore = /*#__PURE__*/function () {
   }, {
     key: "_onConnect",
     value: function _onConnect() {
-      var _this10 = this;
+      var _this9 = this;
       this._ble.read(MM_SERVICE.ID, MM_SERVICE.COMMAND_CH, false).then(function (result) {
         if (!result) {
           throw new Error('Config is not readable');
         }
         var data = base64ToUint8Array(result.message);
         var dataView = new DataView(data.buffer, 0);
-        _this10.hardware = dataView.getUint8(0);
-        _this10.protocol = dataView.getUint8(1);
-        _this10.route = dataView.getUint8(2);
-        _this10._ble.startNotifications(MM_SERVICE.ID, MM_SERVICE.ACTION_EVENT_CH, _this10.onNotify);
-        _this10._ble.startNotifications(MM_SERVICE.ID, MM_SERVICE.PIN_EVENT_CH, _this10.onNotify);
-        if (_this10.hardware === MbitMoreHardwareVersion.MICROBIT_V1) {
-          _this10.microbitUpdateInterval = 100; // milliseconds
+        _this9.hardware = dataView.getUint8(0);
+        _this9.protocol = dataView.getUint8(1);
+        _this9.route = dataView.getUint8(2);
+        _this9._ble.startNotifications(MM_SERVICE.ID, MM_SERVICE.ACTION_EVENT_CH, _this9.onNotify);
+        _this9._ble.startNotifications(MM_SERVICE.ID, MM_SERVICE.PIN_EVENT_CH, _this9.onNotify);
+        if (_this9.hardware === MbitMoreHardwareVersion.MICROBIT_V1) {
+          _this9.microbitUpdateInterval = 100; // milliseconds
         } else {
-          _this10._ble.startNotifications(MM_SERVICE.ID, MM_SERVICE.MESSAGE_CH, _this10.onNotify);
-          _this10.microbitUpdateInterval = 50; // milliseconds
+          _this9._ble.startNotifications(MM_SERVICE.ID, MM_SERVICE.MESSAGE_CH, _this9.onNotify);
+          _this9.microbitUpdateInterval = 50; // milliseconds
         }
 
-        if (_this10.route === CommunicationRoute.SERIAL) {
-          _this10.sendCommandInterval = 100; // milliseconds
+        if (_this9.route === CommunicationRoute.SERIAL) {
+          _this9.sendCommandInterval = 100; // milliseconds
         } else {
-          _this10.sendCommandInterval = 30; // milliseconds
+          _this9.sendCommandInterval = 30; // milliseconds
         }
 
-        _this10.initConfig();
-        _this10.bleBusy = false;
-        _this10.startUpdater();
-        _this10.resetConnectionTimeout();
+        _this9.initConfig();
+        _this9.bleBusy = false;
+        _this9.startUpdater();
+        _this9.resetConnectionTimeout();
       }).catch(function (err) {
-        return _this10._ble.handleDisconnectError(err);
+        return _this9._ble.handleDisconnectError(err);
       });
     }
 
@@ -4438,12 +4728,12 @@ var MbitMore = /*#__PURE__*/function () {
           this.gestureEvents[gestureName] = dataView.getUint32(2, true); // Timestamp
         }
       } else if (dataFormat === MbitMoreDataFormat.PIN_EVENT) {
-        var _pinIndex = dataView.getUint8(0);
-        if (!this._pinEvents[_pinIndex]) {
-          this._pinEvents[_pinIndex] = {};
+        var pinIndex = dataView.getUint8(0);
+        if (!this._pinEvents[pinIndex]) {
+          this._pinEvents[pinIndex] = {};
         }
         var event = dataView.getUint8(1);
-        this._pinEvents[_pinIndex][event] = {
+        this._pinEvents[pinIndex][event] = {
           value: dataView.getUint32(2, true),
           // timesamp of the edge or duration of the pulse
           timestamp: Date.now() // received time
@@ -4476,10 +4766,10 @@ var MbitMore = /*#__PURE__*/function () {
   }, {
     key: "resetConnectionTimeout",
     value: function resetConnectionTimeout() {
-      var _this11 = this;
+      var _this10 = this;
       if (this._timeoutID) window.clearTimeout(this._timeoutID);
       this._timeoutID = window.setTimeout(function () {
-        return _this11._ble.handleDisconnectError(BLEDataStoppedError);
+        return _this10._ble.handleDisconnectError(BLEDataStoppedError);
       }, BLETimeout);
     }
 
@@ -4543,7 +4833,7 @@ var MbitMore = /*#__PURE__*/function () {
   }, {
     key: "configTouchPin",
     value: function configTouchPin(pinIndex, util) {
-      var _this12 = this;
+      var _this11 = this;
       if (!this.isConnected()) {
         return Promise.resolve();
       }
@@ -4556,7 +4846,7 @@ var MbitMore = /*#__PURE__*/function () {
       }], util);
       if (sendPromise) {
         return sendPromise.then(function () {
-          _this12.config.pinMode[pinIndex] = MbitMorePinMode.TOUCH;
+          _this11.config.pinMode[pinIndex] = MbitMorePinMode.TOUCH;
         });
       }
       return;
@@ -4943,12 +5233,6 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
         }),
         value: MbitMoreButtonName.LOGO
       }, {
-        text: 'A',
-        value: MbitMoreButtonName.A
-      }, {
-        text: 'B',
-        value: MbitMoreButtonName.B
-      }, {
         text: 'P0',
         value: MbitMoreButtonName.P0
       }, {
@@ -5243,6 +5527,10 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
         value: 'disconnected'
       }];
     }
+
+    /**
+     * @return {array} - Menu items for Implementatuions menu.
+     */
   }, {
     key: "IMPLEMENTATIONS_MENU",
     get: function get() {
@@ -5464,7 +5752,8 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           arguments: {
             AXIS: {
               type: argumentType.STRING,
-              menu: 'axis'
+              menu: 'axis',
+              defaultValue: AxisSymbol.Absolute
             }
           }
         }, {
@@ -5478,10 +5767,11 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           arguments: {
             AXIS: {
               type: argumentType.STRING,
-              menu: 'axis'
+              menu: 'axis',
+              defaultValue: AxisSymbol.X
             }
           }
-        }, {
+        }, '---', {
           opcode: 'getAnalogValue',
           text: formatMessage({
             id: 'mbitMore.analogValue',
@@ -5492,7 +5782,8 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           arguments: {
             PIN: {
               type: argumentType.STRING,
-              menu: 'analogInPins'
+              menu: 'analogInPins',
+              defaultValue: '0'
             }
           }
         }, '---', {
@@ -5535,7 +5826,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           text: formatMessage({
             id: 'mbitMore.setDigitalOut',
             default: 'set [PIN] Digital [LEVEL]',
-            description: 'set pin to Digtal Output mode and the level(true = High)'
+            description: 'set pin to Digital Output mode and the level(High = true)'
           }),
           blockType: blockType.COMMAND,
           arguments: {
@@ -5686,7 +5977,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           opcode: 'whenDataReceived',
           text: formatMessage({
             id: 'mbitMore.whenDataReceived',
-            default: 'when data with loabel [LABEL] received from micro:bit',
+            default: 'when data with label [LABEL] received from micro:bit',
             description: 'when the data which has the label received'
           }),
           blockType: blockType.HAT,
@@ -5806,7 +6097,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
             items: this.IMPLEMENTATIONS_MENU
           }
         },
-        translationMap: translations
+        translationMap: translations$1
       };
     }
 
@@ -5816,18 +6107,18 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "updatePrevButtonEvents",
     value: function updatePrevButtonEvents() {
-      var _this13 = this;
+      var _this12 = this;
       this.prevButtonEvents = {};
       Object.entries(this._peripheral.buttonEvents).forEach(function (_ref) {
         var _ref2 = _slicedToArray(_ref, 2),
           componentID = _ref2[0],
           events = _ref2[1];
-        _this13.prevButtonEvents[componentID] = {};
+        _this12.prevButtonEvents[componentID] = {};
         Object.entries(events).forEach(function (_ref3) {
           var _ref4 = _slicedToArray(_ref3, 2),
             eventName = _ref4[0],
             timestamp = _ref4[1];
-          _this13.prevButtonEvents[componentID][eventName] = timestamp;
+          _this12.prevButtonEvents[componentID][eventName] = timestamp;
         });
       });
     }
@@ -5842,11 +6133,11 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "whenButtonEvent",
     value: function whenButtonEvent(args) {
-      var _this14 = this;
+      var _this13 = this;
       if (!this.updateLastButtonEventTimer) {
         this.updateLastButtonEventTimer = setTimeout(function () {
-          _this14.updatePrevButtonEvents();
-          _this14.updateLastButtonEventTimer = null;
+          _this13.updatePrevButtonEvents();
+          _this13.updateLastButtonEventTimer = null;
         }, this.runtime.currentStepTime);
       }
       var buttonName = args.NAME;
@@ -5882,7 +6173,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "whenTouchEvent",
     value: function whenTouchEvent(args, util) {
-      var _this15 = this;
+      var _this14 = this;
       var buttonName = args.NAME;
       if (buttonName === MbitMoreButtonName.LOGO) {
         return this.whenButtonEvent(args);
@@ -5893,7 +6184,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
       var configPromise = this._peripheral.configTouchPin(MbitMoreButtonPinIndex[buttonName], util);
       if (!configPromise) return; // This thread was yielded.
       return configPromise.then(function () {
-        return _this15.whenButtonEvent(args);
+        return _this14.whenButtonEvent(args);
       });
     }
 
@@ -5907,27 +6198,19 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "isPinTouched",
     value: function isPinTouched(args, util) {
-      var _this16 = this;
+      var _this15 = this;
       var buttonName = args.NAME;
-      if (buttonName === MbitMoreButtonName.LOGO || buttonName === MbitMoreButtonName.A || buttonName === MbitMoreButtonName.B) {
-        if (buttonName === MbitMoreButtonName.LOGO) {
-          return this._peripheral.isTouched(buttonName);
-        }
-        if (this._peripheral.isPinTouchMode(MbitMoreButtonPinIndex[buttonName])) {
-          return this._peripheral.isTouched(buttonName);
-        }
-        var configPromise = this._peripheral.configTouchPin(MbitMoreButtonPinIndex[buttonName], util);
-        if (!configPromise) return; // This thread was yielded.
-        return configPromise.then(function () {
-          return _this16._peripheral.isTouched(buttonName);
-        });
-      } else if (buttonName === MbitMoreButtonName.P0 || buttonName === MbitMoreButtonName.P1 || buttonName === MbitMoreButtonName.P2) {
-        var resultPromise = this._peripheral.readAnalogIn(pinIndex, util);
-        if (!resultPromise) return;
-        return resultPromise.then(function (level) {
-          return Math.round(level * 100 * 10 / 1024) / 10;
-        }) >= 90;
+      if (buttonName === MbitMoreButtonName.LOGO) {
+        return this._peripheral.isTouched(buttonName);
       }
+      if (this._peripheral.isPinTouchMode(MbitMoreButtonPinIndex[buttonName])) {
+        return this._peripheral.isTouched(buttonName);
+      }
+      var configPromise = this._peripheral.configTouchPin(MbitMoreButtonPinIndex[buttonName], util);
+      if (!configPromise) return; // This thread was yielded.
+      return configPromise.then(function () {
+        return _this15._peripheral.isTouched(buttonName);
+      });
     }
 
     /**
@@ -5936,13 +6219,13 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "updatePrevGestureEvents",
     value: function updatePrevGestureEvents() {
-      var _this17 = this;
+      var _this16 = this;
       this.prevGestureEvents = {};
       Object.entries(this._peripheral.gestureEvents).forEach(function (_ref5) {
         var _ref6 = _slicedToArray(_ref5, 2),
           gestureName = _ref6[0],
           timestamp = _ref6[1];
-        _this17.prevGestureEvents[gestureName] = timestamp;
+        _this16.prevGestureEvents[gestureName] = timestamp;
       });
     }
 
@@ -5955,11 +6238,11 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "whenGesture",
     value: function whenGesture(args) {
-      var _this18 = this;
+      var _this17 = this;
       if (!this.updateLastGestureEventTimer) {
         this.updateLastGestureEventTimer = setTimeout(function () {
-          _this18.updatePrevGestureEvents();
-          _this18.updateLastGestureEventTimer = null;
+          _this17.updatePrevGestureEvents();
+          _this17.updateLastGestureEventTimer = null;
         }, this.runtime.currentStepTime);
       }
       var gestureName = args.GESTURE;
@@ -5979,7 +6262,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "displayMatrix",
     value: function displayMatrix(args, util) {
-      var matrixString = cast.toString(args.MATRIX).replace(/！-～/g, function (ws) {
+      var matrixString = cast.toString(args.MATRIX).replace(/[０-９，]/g, function (ws) {
         return String.fromCharCode(ws.charCodeAt(0) - 0xFEE0);
       }); // zenkaku to hankaku
       var matrixData;
@@ -6026,10 +6309,12 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "displayText",
     value: function displayText(args, util) {
-      var text = String(args.TEXT).replace(/！-～/g, function (zenkaku) {
-        return String.fromCharCode(zenkaku.charCodeAt(0) - 0xFEE0);
-      }) // zenkaku to hankaku
-      .replace(/[^ -~]/g, '?');
+      // zenkaku to hankaku
+      var text = cast.toString(args.TEXT).replace(/[Ａ-Ｚａ-ｚ０-９！-～]/g, function (ws) {
+        return String.fromCharCode(ws.charCodeAt(0) - 0xFEE0);
+      }).replace(/”/g, '"').replace(/’/g, "'").replace(/‘/g, '`').replace(/￥/g, '\\')
+      // eslint-disable-next-line no-irregular-whitespace
+      .replace(/　/g, ' ').replace(/〜/g, '~');
       var delay = parseInt(args.DELAY, 10);
       delay = isNaN(delay) ? 120 : delay; // Use default delay if NaN.
       var resultPromise = this._peripheral.displayText(text, delay, util);
@@ -6099,12 +6384,12 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "getSoundLevel",
     value: function getSoundLevel(args, util) {
-      var _this19 = this;
+      var _this18 = this;
       var resultPromise = this._peripheral.configMic(true, util);
       if (!resultPromise) return; // This thread was yielded.
       return resultPromise.then(function (micState) {
         if (micState) {
-          return Math.round(_this19._peripheral.readSoundLevel() * 1000 / 255) / 10;
+          return Math.round(_this18._peripheral.readSoundLevel() * 1000 / 255) / 10;
         }
         return 0;
       });
@@ -6361,23 +6646,23 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "updatePrevPinEvents",
     value: function updatePrevPinEvents() {
-      var _this20 = this;
+      var _this19 = this;
       this.prevPinEvents = {};
       Object.entries(this._peripheral._pinEvents).forEach(function (_ref7) {
         var _ref8 = _slicedToArray(_ref7, 2),
           pinIndex = _ref8[0],
           events = _ref8[1];
-        _this20.prevPinEvents[pinIndex] = {};
+        _this19.prevPinEvents[pinIndex] = {};
         Object.entries(events).forEach(function (_ref9) {
           var _ref10 = _slicedToArray(_ref9, 2),
             eventID = _ref10[0],
             eventData = _ref10[1];
-          _this20.prevPinEvents[pinIndex][eventID] = {};
+          _this19.prevPinEvents[pinIndex][eventID] = {};
           Object.entries(eventData).forEach(function (_ref11) {
             var _ref12 = _slicedToArray(_ref11, 2),
               key = _ref12[0],
               value = _ref12[1];
-            _this20.prevPinEvents[pinIndex][eventID][key] = value;
+            _this19.prevPinEvents[pinIndex][eventID][key] = value;
           });
         });
       });
@@ -6408,11 +6693,11 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "whenPinEvent",
     value: function whenPinEvent(args) {
-      var _this21 = this;
+      var _this20 = this;
       if (!this.updateLastPinEventTimer) {
         this.updateLastPinEventTimer = setTimeout(function () {
-          _this21.updatePrevPinEvents();
-          _this21.updateLastPinEventTimer = null;
+          _this20.updatePrevPinEvents();
+          _this20.updateLastPinEventTimer = null;
         }, this.runtime.currentStepTime);
       }
       var pinIndex = parseInt(args.PIN, 10);
@@ -6446,18 +6731,18 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "updatePrevReceivedData",
     value: function updatePrevReceivedData() {
-      var _this22 = this;
+      var _this21 = this;
       this.prevReceivedData = {};
       Object.entries(this._peripheral.receivedData).forEach(function (_ref13) {
         var _ref14 = _slicedToArray(_ref13, 2),
           label = _ref14[0],
           contentObject = _ref14[1];
-        _this22.prevReceivedData[label] = {};
+        _this21.prevReceivedData[label] = {};
         Object.entries(contentObject).forEach(function (_ref15) {
           var _ref16 = _slicedToArray(_ref15, 2),
             key = _ref16[0],
             value = _ref16[1];
-          _this22.prevReceivedData[label][key] = value;
+          _this21.prevReceivedData[label][key] = value;
         });
       });
     }
@@ -6485,11 +6770,11 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
   }, {
     key: "whenDataReceived",
     value: function whenDataReceived(args) {
-      var _this23 = this;
+      var _this22 = this;
       if (!this.updateLastDataTimer) {
         this.updateLastDataTimer = setTimeout(function () {
-          _this23.updatePrevReceivedData();
-          _this23.updateLastDataTimer = null;
+          _this22.updatePrevReceivedData();
+          _this22.updateLastDataTimer = null;
         }, this.runtime.currentStepTime);
       }
       var label = args.LABEL;
