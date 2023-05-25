@@ -33,7 +33,7 @@ index 5278b9944..3e6cf1418 100644
                  chunks: ['lib.min', 'gui'],
                  template: 'src/playground/index.ejs',
 -                title: 'Xcratch',
-+                title: 'Eu Rate Boson',
++                title: 'Boson',
                  sentryConfig: process.env.SENTRY_CONFIG ? '"' + process.env.SENTRY_CONFIG + '"' : null
              }),
              new HtmlWebpackPlugin({
