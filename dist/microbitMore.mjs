@@ -6301,8 +6301,8 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           opcode: 'readDigitalLevel',
           text: formatMessage({
             id: 'mbitMore.readDigitalLevel', 
-            default: 'digital value of pin [PIN]',
-            description: 'digital input value of the pin TESTING'
+            default: 'digital value of pin [PIN] TESTING',
+            description: 'digital input value of the pin'
           }),
           blockType: blockType.REPORTER,
           arguments: {
@@ -6346,7 +6346,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
               defaultValue: '0'
             }
           }
-        }, {
+        },/* {
           opcode: 'isPinAfterThreshold',
           text: formatMessage({
             id: 'mbitMore.isPinAfterThreshold',
@@ -6365,7 +6365,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
               defaultValue: 50
             }
           }
-        }, '---', {
+        }*/, '---', {
           opcode: 'setDigitalOut',
           text: formatMessage({
             id: 'mbitMore.setDigitalOut',
