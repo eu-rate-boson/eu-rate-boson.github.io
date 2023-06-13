@@ -5246,7 +5246,7 @@ var MbitMore = /*#__PURE__*/function () {
      * Return whether the pin value is high.
      * @param {number} pin - the pin to check.
      * @param {number} threshold - the analog value threshold to surpass.
-     * @param {BlockUtility} util - utility object provided by the runtime.
+     * @param {object} util - utility object provided by the runtime.
      * @return {boolean} - whether the pin is high or not.
      */
 
@@ -5257,32 +5257,29 @@ var MbitMore = /*#__PURE__*/function () {
       if (threshold<0) {threshold = 0;}
       else if (threshold>100) {threshold = 100;}
 
-      return this.readAnalogIn(pin, util) >= threshold;
+      return this.getAnalogValue(pin, util) >= threshold;
     }
     /**
      * Return whether the pin value is high.
      * @param {number} pin - the pin to check.
-     * @param {BlockUtility} util - utility object provided by the runtime.
      * @return {boolean} - whether the pin is high or not.
      */
 
   }, {
     key: "isPinHigh",
-    value: function isPinHigh(pin, util) {
-      var level = this.readDigitalLevel(pin, util);
+    value: function isPinHigh(pin) {
+      var level = this.readDigitalLevel(pin);
       return level === 1;
     }
     /**
      * Read digital input from the pin.
      * @param {number} pin - the pin to read.
-     * @param {BlockUtility} util - utility object provided by the runtime.
      * @return {number} - digital input value of the pin [0|1].
      */
 
   }, {
     key: "readDigitalLevel",
-    value: function readDigitalLevel(pin, util) {
-      this.setPullMode(parseInt(pin, 10), MbitMorePullModeID[NONE], util)
+    value: function readDigitalLevel(pin) {
       if (!this.isConnected()) {
         return 0;
       }
@@ -6300,7 +6297,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           text: formatMessage({
             id: 'mbitMore.readDigitalLevel', 
             default: 'digital value of pin [PIN]',
-            description: 'digital input value of the pin'
+            description: 'digital input value of the pin IN_TESTING'
           }),
           blockType: blockType.REPORTER,
           arguments: {
@@ -6348,7 +6345,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
           opcode: 'isPinAfterThreshold',
           text: formatMessage({
             id: 'mbitMore.isPinAfterThreshold',
-            default: '[PIN] pin analog is higher than [THRESHOLD] (0-100)?',
+            default: '[PIN] pin analog is higher than [THRESHOLD] (0-100)? IN_TESTING',
             description: 'is the selected pin higher than the value?'
           }),
           blockType: blockType.BOOLEAN,
@@ -6924,7 +6921,7 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
      * @param {object} args - the block's arguments.
      * @param {number} args.PIN - pin ID.
      * @param {number} args.threshold - threshold.
-     * @param {BlockUtility} util - utility object provided by the runtime.
+     * @param {object} util - utility object provided by the runtime.
      * @return {boolean} - true if the pin is high.
      */
 
@@ -6937,14 +6934,13 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
      * Test the selected pin is high as digital.
      * @param {object} args - the block's arguments.
      * @param {number} args.PIN - pin ID.
-     * @param {BlockUtility} util - utility object provided by the runtime.
      * @return {boolean} - true if the pin is high.
      */
 
   }, {
     key: "isPinHigh",
-    value: function isPinHigh(args, util) {
-      return this._peripheral.isPinHigh(parseInt(args.PIN, 10), util);
+    value: function isPinHigh(args) {
+      return this._peripheral.isPinHigh(parseInt(args.PIN, 10));
     }
     /**
      * Get amount of light (0 - 255) on the LEDs.
@@ -7028,14 +7024,13 @@ var MbitMoreBlocks = /*#__PURE__*/function () {
      * Return digital value of the pin.
      * @param {object} args - the block's arguments.
      * @param {number} args.PIN - pin ID.
-     * @param {BlockUtility} util - utility object provided by the runtime.
      * @return {number} - digital input value of the pin.
      */
 
   }, {
     key: "readDigitalLevel",
-    value: function readDigitalLevel(args, util) {
-      return this._peripheral.readDigitalLevel(parseInt(args.PIN, 10), util);
+    value: function readDigitalLevel(args) {
+      return this._peripheral.readDigitalLevel(parseInt(args.PIN, 10));
     }
     /**
      * Send data with label.
