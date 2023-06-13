@@ -67,7 +67,7 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
+define(['./workbox-eae27646'], (function (workbox) { 'use strict';
 
   /**
   * Welcome to your Workbox-powered service worker!
@@ -97,7 +97,7 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "9f37af3b8f67158faeae72520443dd98"
   }, {
     "url": "blocks-only.html",
-    "revision": "c446b7f29b4035a8ad8fe87423804ba8"
+    "revision": "f13c67296927277ec613262588abc716"
   }, {
     "url": "chunks/blocksonly.js",
     "revision": "95531038cfa411c4a9204d64f40f04bf"
@@ -124,7 +124,7 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "b29852eae60ebb2d5390bdb279168b15"
   }, {
     "url": "compatibility-testing.html",
-    "revision": "dc9a2ace371c2e87be232932b408b5d8"
+    "revision": "2bde93dea2caaa70e96e13710c2664bb"
   }, {
     "url": "https://assets.scratch.mit.edu/internalapi/asset/0015433a406a53f00b792424b823268c.png/get/",
     "revision": "0015433a406a53f00b792424b823268c"
@@ -4120,16 +4120,16 @@ define(['./workbox-b5366f8b'], (function (workbox) { 'use strict';
     "revision": "ff8b8c3bf841a11fd5fe3afaa92be1b5"
   }, {
     "url": "index.html",
-    "revision": "4397c2621da2fbe520fb3b69738e3797"
+    "revision": "1eb33998bbd676ca04135df3b28a3089"
   }, {
     "url": "lib.min.js",
-    "revision": "b5010d1c15ddffbd6f3b6a8923821769"
+    "revision": "153f8039f879543ba86db17048b290c7"
   }, {
     "url": "lib.min.js.map",
-    "revision": "75e118b2919bbdd6717322ec9ee4e37d"
+    "revision": "e570952581e8eb15d1bb488f791bd93a"
   }, {
     "url": "player.html",
-    "revision": "a51bd6215cba29d18d9239359766dcee"
+    "revision": "cfde43c13a7ec1087b27d5f88374c15c"
   }, {
     "url": "static/assets/0136d7b1618e6d7ecaf97717bd128a05.jpg",
     "revision": "0136d7b1618e6d7ecaf97717bd128a05"
