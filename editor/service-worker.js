@@ -4123,10 +4123,10 @@ define(['./workbox-eae27646'], (function (workbox) { 'use strict';
     "revision": "1eb33998bbd676ca04135df3b28a3089"
   }, {
     "url": "lib.min.js",
-    "revision": "76dee022834b57f641cd046aa1693052"
+    "revision": "b4b81bbcee7e05192d90ef8a1aadc07f"
   }, {
     "url": "lib.min.js.map",
-    "revision": "0be981022e80f7ef1256ad036eb283c0"
+    "revision": "20df4160ba4af68b100141cb9721569e"
   }, {
     "url": "player.html",
     "revision": "cfde43c13a7ec1087b27d5f88374c15c"
